@@ -163,6 +163,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1213379, 0, 1.4701538)
 shape = SubResource("BoxShape3D_6d1t3")
 debug_color = Color(0.96168846, 1.540184e-06, 0.51167804, 0.41960785)
 
+[node name="T-B" type="CSGBox3D" parent="." unique_id=2138235047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.597, 5.9760184, 14.217)
+size = Vector3(9.880615, 1, 12.884079)
+
 [connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Area3D" to="." method="entered_bedroom"]
