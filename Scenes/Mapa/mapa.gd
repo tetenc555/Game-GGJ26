@@ -31,3 +31,12 @@ func _on_dialog_finished():
 
 func _ready():
 	DialogManager.dialog_finished.connect(_on_dialog_finished)
+	$CameraSala.make_current()
+
+func entered_bedroom(body: Node3D) -> void:
+	$CameraQuarto.make_current()
+
+
+
+func exited_bedroom(body: Node3D) -> void:
+	$CameraSala.make_current() 

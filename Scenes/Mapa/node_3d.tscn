@@ -39,6 +39,9 @@ albedo_color = Color(0.22205421, 0.11881498, 0.038192652, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6655"]
 size = Vector3(1.5, 1.5, 1.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6d1t3"]
+size = Vector3(16.026855, 1, 16.474487)
+
 [node name="Node3D" type="Node3D" unique_id=1740440265]
 script = ExtResource("1_6d1t3")
 
@@ -49,8 +52,9 @@ environment = SubResource("Environment_6wwey")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=675466456]
+[node name="CameraSala" type="Camera3D" parent="." unique_id=675466456]
 transform = Transform3D(0.99995995, 0.0011437929, 0.008880456, -0.002780326, 0.9824447, 0.18653338, -0.008511201, -0.18655059, 0.9824085, -0.09952009, 6.370637, 11.026501)
+current = true
 fov = 68.78564
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
@@ -141,5 +145,18 @@ mesh = SubResource("BoxMesh_xk6e0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48781872, 0)
 shape = SubResource("BoxShape3D_y6655")
 
+[node name="Area3D" type="Area3D" parent="." unique_id=2097811288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.83989, 1.2046435, -4.038749)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=816910825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1213379, 0, 1.4701538)
+shape = SubResource("BoxShape3D_6d1t3")
+
+[node name="CameraQuarto" type="Camera3D" parent="." unique_id=1334273193]
+transform = Transform3D(1, 0, 0, 0, 0.8343768, 0.55119455, 0, -0.55119455, 0.8343768, -20.83989, 7.9439516, 5.2624717)
+fov = 120.791756
+
 [connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="StaticBody3D2/Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="Area3D" to="." method="entered_bedroom"]
+[connection signal="body_exited" from="Area3D" to="." method="exited_bedroom"]
