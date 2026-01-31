@@ -1,26 +1,26 @@
 [gd_scene format=3 uid="uid://dp6o15xpe0646"]
 
-[ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Personagem.tscn" id="1_7q7q3"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7q7q3"]
-size = Vector3(15, 0.5, 15)
-
-[sub_resource type="BoxMesh" id="BoxMesh_bi5fs"]
-size = Vector3(15, 0.5, 15)
+[ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Personagem/Personagem.tscn" id="1_7q7q3"]
 
 [node name="Node3D" type="Node3D" unique_id=1740440265]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=675466456]
+transform = Transform3D(-4.371139e-08, -0.5, 0.8660254, 0, 0.8660254, 0.5, -1, 2.1855694e-08, -3.7855173e-08, 9.680763, 6.31049, 2.2891178)
+fov = 156.8
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4352562, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=675466456]
-transform = Transform3D(1, 0, 0, 0, 0.8667488, 0.49874493, 0, -0.49874493, 0.8667488, 0.049538612, 2.2397, 2.4645908)
-fov = 87.35755
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=662865334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2093658, 0, 3.797699)
+use_collision = true
+size = Vector3(20.916351, 1, 40.050354)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=804765624]
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=427975516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.725143, -0.0024166107, -2.5646274)
+use_collision = true
+size = Vector3(16.143692, 1, 16.501799)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=680823948]
-shape = SubResource("BoxShape3D_7q7q3")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1045025104]
-mesh = SubResource("BoxMesh_bi5fs")
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=791185838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.596502, -0.010898113, 14.217189)
+size = Vector3(9.880615, 1, 12.884079)
