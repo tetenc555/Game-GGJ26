@@ -45,3 +45,9 @@ func _unhandled_input(event):
 			return
 		
 		_show_text_box()
+
+var dialog_box
+
+func _ready():
+	# ajuste o caminho se precisar
+	dialog_box = get_tree().get_first_node_in_group("dialog_box")

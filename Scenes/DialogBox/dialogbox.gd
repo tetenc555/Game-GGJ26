@@ -49,3 +49,6 @@ func _display_letter():
 
 func _on_letter_display_timer_timeout() -> void:
 	_display_letter()
+
+func _ready():
+	add_to_group("dialog_box")
