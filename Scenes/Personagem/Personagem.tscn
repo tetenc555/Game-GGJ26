@@ -20,16 +20,19 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ufmvo"]
-size = Vector3(0.16966248, 0.39849854, 0.11187744)
+size = Vector3(0.8016319, 1.8621368, 0.11187744)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
 script = ExtResource("1_sovmv")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=870660202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97388947, 0)
+pixel_size = 0.05
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sovmv")
 animation = &"new_animation"
 autoplay = "new_animation"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
-transform = Transform3D(0.99765563, -0.055536047, 0.039988223, 0.056467444, 0.99814975, -0.022551015, -0.03866184, 0.024756175, 0.99894565, -0.0009780349, -0.014676469, -0.027323604)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033573657, 0.9356303, -0.027323604)
 shape = SubResource("BoxShape3D_ufmvo")
