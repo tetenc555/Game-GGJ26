@@ -2,14 +2,40 @@
 
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Personagem/Personagem.tscn" id="1_7q7q3"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_6d1t3"]
+sky_material = SubResource("ProceduralSkyMaterial_33f23")
+
+[sub_resource type="Environment" id="Environment_6wwey"]
+background_mode = 2
+sky = SubResource("Sky_6d1t3")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6d1t3"]
+size = Vector3(8, 8, 8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_33f23"]
+size = Vector3(8, 8, 8)
+
 [node name="Node3D" type="Node3D" unique_id=1740440265]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1223002260]
+environment = SubResource("Environment_6wwey")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1695156520]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=675466456]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 2.3447785, 6.31049, 15.417265)
-fov = 156.8
+transform = Transform3D(0.99995995, 0.0011437929, 0.008880456, -0.002780326, 0.9824447, 0.18653338, -0.008511201, -0.18655059, 0.9824085, -0.09952009, 6.370637, 11.026501)
+fov = 68.78564
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4352562, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0798061, 1.3683846, 0.20596409)
 
 [node name="C-S" type="CSGBox3D" parent="." unique_id=662865334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2093658, 0, 3.797699)
@@ -26,7 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.596502, -0.010898113, 14.
 size = Vector3(9.880615, 1, 12.884079)
 
 [node name="P-S-E" type="CSGBox3D" parent="." unique_id=999183506]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.215432, 3.2601848, 3.788147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.207278, 3.212112, 3.801197)
 size = Vector3(0.068847656, 6.4263306, 39.964233)
 
 [node name="P-S-W" type="CSGBox3D" parent="." unique_id=1479889664]
@@ -34,6 +60,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.675328, 3.2601848, 3.7881
 use_collision = true
 collision_layer = 3
 size = Vector3(0.068847656, 6.4263306, 39.964233)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="P-S-W" unique_id=1232342871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3743935, 10.741316)
+size = Vector3(1, 2.7645264, 2.0146484)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="P-S-W" unique_id=33403756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4005766, -6.541526)
+layers = 2
+operation = 2
+size = Vector3(1, 2.7645264, 2.0146484)
 
 [node name="P-S-N" type="CSGBox3D" parent="." unique_id=14124546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, -16.163532)
@@ -48,7 +84,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.59421, 3.2601848, 20.7650
 size = Vector3(9.876919, 6.4263306, 0.13683319)
 
 [node name="P-B-N" type="CSGBox3D" parent="." unique_id=701803349]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.589317, 3.2601848, 7.796811)
+transform = Transform3D(1, 0, 0, 0, 0.9999596, -0.008988325, 0, 0.008988325, 0.9999596, -16.589317, 3.2601848, 7.796811)
 size = Vector3(9.886702, 6.4263306, 0.13683319)
 
 [node name="P-B-W" type="CSGBox3D" parent="." unique_id=2071574001]
@@ -66,3 +102,15 @@ size = Vector3(16.090324, 6.4263306, 0.13683319)
 [node name="P-B-W2" type="CSGBox3D" parent="." unique_id=1823053057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.695524, 3.2601848, -2.6032581)
 size = Vector3(0.073207855, 6.4263306, 16.447395)
+
+[node name="interacao" type="StaticBody3D" parent="." unique_id=1353352481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1983356, -1.1076565, 15.035214)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interacao" unique_id=1090418100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2026005, 5.642267, -20.076195)
+shape = SubResource("BoxShape3D_6d1t3")
+debug_color = Color(0.9050437, 0.00014054179, 0.749598, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="interacao" unique_id=398746711]
+transform = Transform3D(1, 0, 0, 0, 0.99975973, 0.021919578, 0, -0.021919578, 0.99975973, -12.300042, 5.615694, -20.0952)
+mesh = SubResource("BoxMesh_33f23")
