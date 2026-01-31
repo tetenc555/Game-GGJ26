@@ -24,6 +24,7 @@ size = Vector3(1.6995535, 3.3120499, 0.48701668)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
 collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_sovmv")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=870660202]

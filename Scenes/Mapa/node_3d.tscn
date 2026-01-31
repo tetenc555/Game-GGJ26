@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0xfv4oqy028d" path="res://Scenes/Mapa/mapa.gd" id="1_6d1t3"]
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Personagem/Personagem.tscn" id="1_7q7q3"]
-[ext_resource type="PackedScene" uid="uid://c3mo07gbm2jb0" path="res://Assets/Abajur/Abajur.blend" id="3_6wwey"]
+[ext_resource type="PackedScene" uid="uid://ddpb7muitv5sm" path="res://Assets/Abajur/Abajur.blend" id="3_6wwey"]
 [ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="3_oq3mb"]
 [ext_resource type="PackedScene" uid="uid://7hft04d4k5f6" path="res://Assets/Cabeceira e Cama/Cabeceira e Cama.blend" id="5_ouqb2"]
 [ext_resource type="PackedScene" uid="uid://mgddkmxq8lwd" path="res://Assets/Armario de Roupa/Armario de Roupa.blend" id="6_xk6e0"]
@@ -70,7 +70,6 @@ shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
 transform = Transform3D(-4.371139e-08, -0.17364818, 0.9848077, 0, 0.9848077, 0.17364818, -1, 7.590403e-09, -4.304731e-08, -1.0798061, 1.3683846, 0.20596409)
-collision_mask = 3
 collision_priority = 2.0
 
 [node name="C-S" type="CSGBox3D" parent="." unique_id=662865334]
@@ -115,10 +114,16 @@ size = Vector3(1, 4.791321, 2.444336)
 
 [node name="P-S-N" type="CSGBox3D" parent="." unique_id=14124546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, -16.163532)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(20.76242, 6.4263306, 0.13683319)
 
 [node name="P-S-S" type="CSGBox3D" parent="." unique_id=245977431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, 23.727097)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(20.76242, 6.4263306, 0.13683319)
 
 [node name="P-B-S" type="CSGBox3D" parent="." unique_id=226946826]
@@ -135,14 +140,23 @@ size = Vector3(0.073207855, 6.4263306, 13.144588)
 
 [node name="P-Q-N" type="CSGBox3D" parent="." unique_id=287163223]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.691128, 3.2601848, -10.8365)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(16.090324, 6.4263306, 0.13683319)
 
 [node name="P-Q-S" type="CSGBox3D" parent="." unique_id=1487909852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.691128, 3.2601848, 5.5961194)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(16.090324, 6.4263306, 0.13683319)
 
 [node name="P-B-W2" type="CSGBox3D" parent="." unique_id=1823053057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.695524, 3.2601848, -2.6032581)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(0.073207855, 6.4263306, 16.447395)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1748906648]
