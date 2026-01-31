@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://db1dqsavnoda7"]
 
-[ext_resource type="Texture2D" uid="uid://4y40e1ouxtbf" path="res://icon.svg" id="1_c25xg"]
 [ext_resource type="Script" uid="uid://mo7u5ye3oolp" path="res://Scenes/Personagem/personagem.gd" id="1_sovmv"]
+[ext_resource type="Texture2D" uid="uid://ftuxa8xn7pgk" path="res://Assets/m.png" id="2_rsnxq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sovmv"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_c25xg")
+"texture": ExtResource("2_rsnxq")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ufmvo"]
-size = Vector3(1, 1, 0.11187744)
+size = Vector3(0.16966248, 0.39849854, 0.11187744)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
 script = ExtResource("1_sovmv")
@@ -29,8 +29,7 @@ script = ExtResource("1_sovmv")
 sprite_frames = SubResource("SpriteFrames_sovmv")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.17742953
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
-transform = Transform3D(0.99765563, -0.055536047, 0.039988223, 0.056467444, 0.99814975, -0.022551015, -0.03866184, 0.024756175, 0.99894565, 0.009967707, -0.04054988, -0.028345853)
+transform = Transform3D(0.99765563, -0.055536047, 0.039988223, 0.056467444, 0.99814975, -0.022551015, -0.03866184, 0.024756175, 0.99894565, -0.0009780349, -0.014676469, -0.027323604)
 shape = SubResource("BoxShape3D_ufmvo")
