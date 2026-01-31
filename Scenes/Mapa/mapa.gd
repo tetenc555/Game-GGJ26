@@ -3,7 +3,7 @@ extends Node3D
 var id: String = ""
 var interactionLocked: bool = false
 var playerPodeInteragir: bool = false
-
+var paredeQuarto
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if (body.is_in_group("player")):
 		id = "abajur"
@@ -31,12 +31,32 @@ func _on_dialog_finished():
 
 func _ready():
 	DialogManager.dialog_finished.connect(_on_dialog_finished)
-	$CameraSala.make_current()
+	paredeQuarto = $"P-S-W"
 
 func entered_bedroom(body: Node3D) -> void:
-	$CameraQuarto.make_current()
-
-
+	if body.is_in_group("player"):
+		move_camera(Vector3(12.28, 24.00, -2.76))
+		fade_out(paredeQuarto)
 
 func exited_bedroom(body: Node3D) -> void:
-	$CameraSala.make_current() 
+	if body.is_in_group("player"):
+		move_camera(Vector3(32.05, 27.27, 3.1))
+		fade_in(paredeQuarto)
+
+func fade_out(node: CSGBox3D):
+	var mat = node.material
+	var tween = create_tween()
+	tween.tween_property(mat, "albedo_color:a", 0.1, 0.5)
+
+func fade_in(node: CSGBox3D):
+	node.visible = true
+	var mat = node.material
+	var tween = create_tween()
+	tween.tween_property(mat, "albedo_color:a", 1, 0.5)
+
+func move_camera(pos: Vector3):
+	var cam = $Camera3D
+	var tween = create_tween()
+	tween.tween_property(cam, "global_position", pos, 0.8) \
+		.set_trans(Tween.TRANS_SINE) \
+		.set_ease(Tween.EASE_IN_OUT)
