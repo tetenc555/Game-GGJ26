@@ -66,6 +66,8 @@ shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
 transform = Transform3D(-4.371139e-08, -0.17364818, 0.9848077, 0, 0.9848077, 0.17364818, -1, 7.590403e-09, -4.304731e-08, -1.0798061, 1.3683846, 0.20596409)
+collision_mask = 3
+collision_priority = 2.0
 
 [node name="C-S" type="CSGBox3D" parent="." unique_id=662865334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2417564, 0, 3.8038483)
@@ -89,10 +91,11 @@ visible = false
 size = Vector3(0.068847656, 6.4263306, 39.964233)
 
 [node name="P-S-W" type="CSGBox3D" parent="." unique_id=1479889664]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.675328, 3.2601848, 3.788147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.531374, 3.2601848, 3.788147)
+sorting_offset = -1.0
 use_collision = true
-collision_layer = 3
-size = Vector3(0.068847656, 6.4263306, 39.964233)
+collision_layer = 2
+size = Vector3(0.35675633, 6.4263306, 39.964233)
 material = SubResource("StandardMaterial3D_6wwey")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="P-S-W" unique_id=1232342871]
