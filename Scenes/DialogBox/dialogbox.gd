@@ -3,52 +3,60 @@ extends MarginContainer
 @onready var label = $MarginContainer/Label
 @onready var timer = $LetterDisplayTimer
 
+signal finishedDisplaying
+
 const MAX_WIDTH = 256
 
-var text = ""
-var letter_index = 0
+var text := ""
+var letter_index := 0
+var is_typing := false
 
-var letter_time = 0.03
-var space_time = 0.06
-var punctuation_time = 0.2
+var letter_time := 0.03
+var space_time := 0.01
+var punctuation_time := 0.08
 
-signal finishedDisplaying()
 
-func display_text(text_to_display: String):
-	text = text_to_display
-	label.text=text_to_display
-	
-	await resized
-	custom_minimum_size.x = min(size.x, MAX_WIDTH)
-	if size.x > MAX_WIDTH:
-		label.autowrap_mode = TextServer.AUTOWRAP_WORD
-		await resized # x
-		await resized # y
-		custom_minimum_size.y = size.y
-		
-	global_position.x -= size.x/2
-	global_position.y -= size.y + 24
-	
+func _ready():
+	timer.timeout.connect(_on_timer_timeout)
+
+
+func display_text(t: String):
+	text = t
 	label.text = ""
-	_display_letter()
+	letter_index = 0
+	is_typing = true
 	
+	await get_tree().process_frame  # garante layout
+	custom_minimum_size.x = min(size.x, MAX_WIDTH)
+
+	_display_letter()
+
+
 func _display_letter():
-	label.text += text[letter_index]
 	if letter_index >= text.length():
+		is_typing = false
 		finishedDisplaying.emit()
 		return
-		
-	match text[letter_index]:
-		"!", ".",",", "?":
+
+	label.text += text[letter_index]
+	var c = text[letter_index]
+	letter_index += 1
+
+	match c:
+		"!", ".", ",", "?":
 			timer.start(punctuation_time)
 		" ":
-			timer.star(space_time)
+			timer.start(space_time)
 		_:
 			timer.start(letter_time)
 
 
-func _on_letter_display_timer_timeout() -> void:
+func _on_timer_timeout():
 	_display_letter()
 
-func _ready():
-	add_to_group("dialog_box")
+func finish_instantly():
+	timer.stop()
+	label.text = text
+	letter_index = text.length()
+	is_typing = false
+	finishedDisplaying.emit()

@@ -26,6 +26,5 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 vertical_alignment = 1
 
 [node name="LetterDisplayTimer" type="Timer" parent="." unique_id=742078548]
-one_shot = true
 
 [connection signal="timeout" from="LetterDisplayTimer" to="." method="_on_letter_display_timer_timeout"]
