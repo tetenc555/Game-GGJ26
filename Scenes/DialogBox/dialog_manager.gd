@@ -10,6 +10,7 @@ var text_box
 var text_box_position: Vector2
 var is_dialog_active = false
 var can_advance_line = false
+signal dialog_finished
 
 func start_dialog(position: Vector2, lines: Array[String]):
 	if is_dialog_active:
@@ -50,6 +51,7 @@ func _unhandled_input(event):
 		text_box = null
 		is_dialog_active = false
 		current_line_index = 0
+		dialog_finished.emit()  
 		return
 
 	_show_text_box()
