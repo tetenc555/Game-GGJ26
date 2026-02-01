@@ -14,7 +14,8 @@ var dialogs: Dictionary  = {
 	"piaVerao": PackedStringArray(["Há somente uma caneca dentro da pia."]),
 	"lavaRoupaVerao": PackedStringArray(["Está lavando uma muda de roupas."]),
 	"bancoVerao": PackedStringArray(["Você se lembra de diversos dias em que ficou sentada nesse banco observando alegremente Natália preparando o almoço."]),
-	"estanteVerao": PackedStringArray(["Existem diversos livros, alguns seus outros de Natália. Seus gostos parecem opostos."]),
+	"estanteVerao": PackedStringArray(["Existem diversos livros, alguns seus outros de Natália. Seus gostos parecem opostos, mas se combinam."]),
+	"banheiroGeral": PackedStringArray(["Não preciso ir no banheiro agora."]),
 	
 	#dialogo1
 	"Narrador1": PackedStringArray([" Em um salão isolado do mundo urbano, nossa protagonista se encontra em um baile de máscaras, junto com sua amada (talvez, nem tão amada... Só o futuro e atitudes de nossa protagonista dirão o curso que sua história terá).","Este baile de máscaras é uma tradição da alta sociedade brasileira, o evento ocorre em uma cúpula isolada do mundo, no coração da floresta amazônica. Nossa protagonista e sua companheira parecem estar tendo uma conversa um tanto, quanto acalorada... "]),
@@ -82,6 +83,8 @@ var dialogs: Dictionary  = {
 "camaInverno": PackedStringArray(["A cama parece tão vazia, como se já não contasse a história de um casal feliz"]),
 "armarioInverno": PackedStringArray(["Aparentemente, agasalhos de frio ganham destaque em seu interior"]),
 "estanteInverno": PackedStringArray(["A estante parece vazia, apenas alguns livros seus espalhados em algumas prateleiras."]),
+"lavaRoupaInverno": PackedStringArray(["Está cheia de roupas, elas estão fedendo tanto que você decide não abrir a tampa"]),
+"bancoInverno": PackedStringArray(["Você não tem porque se sentar. Não sem a visão da Natália cozinhando."]),
 
 "NarradorBaileVazio": PackedStringArray([
 "Sophia se encontra novamente no salão do baile de máscaras, mas desta vez completamente sozinha."
