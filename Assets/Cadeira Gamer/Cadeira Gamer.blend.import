@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhl42lu8mpu0d"
-path="res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"
+uid="uid://d08esp0uw1wvh"
+path="res://.godot/imported/Cadeira Gamer.blend-7cb18718963e371bce2ccc4c6ab2b865.scn"
 
 [deps]
 
-source_file="res://Assets/janelaBaile/Janela1Baile.blend"
-dest_files=["res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"]
+source_file="res://Assets/Cadeira Gamer/Cadeira Gamer.blend"
+dest_files=["res://.godot/imported/Cadeira Gamer.blend-7cb18718963e371bce2ccc4c6ab2b865.scn"]
 
 [params]
 
