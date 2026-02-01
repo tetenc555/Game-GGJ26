@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://db1dqsavnoda7"]
+[gd_scene load_steps=19 format=3 uid="uid://db1dqsavnoda7"]
 
 [ext_resource type="Script" uid="uid://mo7u5ye3oolp" path="res://Scenes/Sophia/sophia.gd" id="1_sovmv"]
 [ext_resource type="Texture2D" uid="uid://cb15rq2isu7nc" path="res://Assets/animacoes/sophia/sophia - andar - costas.png" id="2_m8460"]
@@ -107,20 +107,19 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_ufmvo"]
 size = Vector3(1.6995535, 3.3120499, 0.48701668)
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
+[node name="CharacterBody3D" type="CharacterBody3D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_sovmv")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1336439116]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.679438, 0)
 pixel_size = 0.09
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_jb7qt")
-animation = &"andar_costas"
+animation = &"andar_lado"
 autoplay = "idle_frente"
-frame_progress = 0.20361787
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05967708, 1.6605868, -0.012311816)
 shape = SubResource("BoxShape3D_ufmvo")
