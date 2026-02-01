@@ -4,10 +4,17 @@ extends Node
 var dialogs: Dictionary  = {
 	"mesaTrabalhoVerao": PackedStringArray(["Essa é minha mesa de trabalho, no tempo livre gosto de jogar jogos de fazendinha"]),
 	"camaVerao": PackedStringArray(["A cama já não parece tão vazia, quanto algum tempo atras"]),
-	"janelaVerao": PackedStringArray(["O calor de Xique Xique – Bahia permanece castigante"]),
+	"janelaVerao": PackedStringArray(["O calor de Xique Xique – Bahia permanece castigante. Ao fundo você escuta o vento sintilando."]),
 	"cabeceiraVerao": PackedStringArray(["Há um quadro de Sophia e Natalia sorrindo muito felizes. (Sophia - “Saudade de quando os dias eram mais simples como esse“)"]),
 	"armarioVerao": PackedStringArray(["Há algumas roupas antigas de Sophia que não deveriam estar ali"]),
-	
+	"geladeiraVerao": PackedStringArray(["Há diversos post its de Natália, eles possuem anotações das coisas que Sophia precisa fazer no dia: Lembre-se de lavar as roupas, xuxu; Lave as roupas♡; entre outros."]),
+	"fogaoVerao": PackedStringArray(["Está brilhando, como se tivesse sido limpo algumas horas atrás."]),
+	"TVVerao": PackedStringArray(["Está passando um filme de romance, ele te lembra a Natália."]),
+	"sofaVerao": PackedStringArray(["Você se lembra de ficar sentada nele agarradinha com Natália enquanto viam um filme no último fim de semana"]),
+	"piaVerao": PackedStringArray(["Há somente uma caneca dentro da pia."]),
+	"lavaRoupaVerao": PackedStringArray(["Está lavando uma muda de roupas."]),
+	"bancoVerao": PackedStringArray(["Você se lembra de diversos dias em que ficou sentada nesse banco observando alegremente Natália preparando o almoço."]),
+	"estanteVerao": PackedStringArray(["Existem diversos livros, alguns seus outros de Natália. Seus gostos parecem opostos."]),
 	
 	#dialogo1
 	"Narrador1": PackedStringArray([" Em um salão isolado do mundo urbano, nossa protagonista se encontra em um baile de máscaras, junto com sua amada (talvez, nem tão amada... Só o futuro e atitudes de nossa protagonista dirão o curso que sua história terá).","Este baile de máscaras é uma tradição da alta sociedade brasileira, o evento ocorre em uma cúpula isolada do mundo, no coração da floresta amazônica. Nossa protagonista e sua companheira parecem estar tendo uma conversa um tanto, quanto acalorada... "]),
@@ -73,7 +80,7 @@ var dialogs: Dictionary  = {
 "cabeceiraInverno": PackedStringArray(["O peso dos sorrisos de Sophia e Natalia parece doloroso, um sentimento de que momentos assim não acontecerão mais.  "]),
 "camaInverno": PackedStringArray(["A cama parece tão vazia, como se já não contasse a história de um casal feliz"]),
 "armarioInverno": PackedStringArray(["Aparentemente, agasalhos de frio ganham destaque em seu interior"]),
-
+"estanteInverno": PackedStringArray(["A estante parece vazia, apenas alguns livros seus espalhados em algumas prateleiras."]),
 
 "NarradorBaileVazio": PackedStringArray([
 "Sophia se encontra novamente no salão do baile de máscaras, mas desta vez completamente sozinha."
