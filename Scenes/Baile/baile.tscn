@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bhl42lu8mpu0d" path="res://Assets/janelaBaile/Janela1Baile.blend" id="3_1cae1"]
 [ext_resource type="Texture2D" uid="uid://camhwv2i6wgvh" path="res://Assets/janelaBaileVidro.png" id="4_uvd7u"]
 [ext_resource type="PackedScene" uid="uid://dtdc3yft60d2a" path="res://Assets/porta do baile/Porta Baile.blend" id="5_gnjwu"]
+[ext_resource type="PackedScene" uid="uid://d0pwywxd1qast" path="res://Assets/fonte/baile1.blend" id="7_1cae1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiy6j"]
 albedo_texture = ExtResource("1_in1sx")
@@ -126,6 +127,9 @@ material = SubResource("StandardMaterial3D_qjtmg")
 
 [node name="Porta Baile" parent="." unique_id=1629316350 instance=ExtResource("5_gnjwu")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0.4780023, -0.106597185, 11.97438)
+
+[node name="baile1" parent="." unique_id=1296171420 instance=ExtResource("7_1cae1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.46694565, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=938563692]
 transform = Transform3D(-0.012217023, -0.57353365, 0.8190909, 0, 0.81915206, 0.57357645, -0.9999254, 0.0070073972, -0.010007599, 32.18351, 27.27245, -0.22252452)
