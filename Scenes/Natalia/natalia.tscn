@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b42lwa1rgiwpt"]
+[gd_scene load_steps=19 format=3 uid="uid://b42lwa1rgiwpt"]
 
 [ext_resource type="Script" uid="uid://bfh6fa2u44115" path="res://Scenes/Natalia/natalia.gd" id="1_mgsjn"]
 [ext_resource type="Texture2D" uid="uid://cc3lo26ti41cm" path="res://Assets/animacoes/natalia/natalia - andar - costas.png" id="2_5k0us"]
@@ -107,20 +107,19 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_ufmvo"]
 size = Vector3(1.6995535, 3.3120499, 0.48701668)
 
-[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
+[node name="CharacterBody3D" type="CharacterBody3D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_mgsjn")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=870660202]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.679438, 0)
 pixel_size = 0.09
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sovmv")
-animation = &"andar_lado"
-autoplay = "idle_frente"
-frame_progress = 0.37302607
+animation = &"idle_costas"
+autoplay = "idle_costas"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05967708, 1.6605868, -0.012311816)
 shape = SubResource("BoxShape3D_ufmvo")

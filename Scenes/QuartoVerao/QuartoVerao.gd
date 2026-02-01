@@ -92,14 +92,11 @@ func move_camera(pos: Vector3):
 		.set_ease(Tween.EASE_IN_OUT)
 
 #interactions
+func _on_interacao_mesa_body_entered(body):
+	trocaIDEntrada("mesaTrabalhoVerao",body)
 
-func _on_interacao_mesa_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("mesaTrabalhoVerao",body);
-
-
-func _on_interacao_mesa_body_exited(body: Node3D) -> void:
-	trocaIDSaida("mesaTrabalhoVerao",body);
-
+func _on_interacao_mesa_body_exited(body):
+	trocaIDSaida("mesaTrabalhoVerao",body)
 
 func _on_interacao_cama_body_entered(body: Node3D) -> void:
 	trocaIDEntrada("camaVerao",body)

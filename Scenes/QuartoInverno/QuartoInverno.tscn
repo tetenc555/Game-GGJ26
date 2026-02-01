@@ -1,9 +1,8 @@
-[gd_scene load_steps=64 format=3 uid="uid://dp6o15xpe0646"]
+[gd_scene load_steps=65 format=3 uid="uid://dp6o15xpe0646"]
 
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="1_7q7q3"]
 [ext_resource type="Script" uid="uid://b0gb5nal55slc" path="res://Scenes/QuartoInverno/QuartoInverno.gd" id="1_ssgdo"]
 [ext_resource type="PackedScene" uid="uid://ddpb7muitv5sm" path="res://Assets/Abajur/Abajur.blend" id="3_6wwey"]
-[ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="3_oq3mb"]
 [ext_resource type="Texture2D" uid="uid://tvb1t3viww34" path="res://Assets/chaoSala.png" id="3_trdd2"]
 [ext_resource type="Texture2D" uid="uid://dl6x72ygilstk" path="res://Assets/chaoQuarto.png" id="4_4tel5"]
 [ext_resource type="Texture2D" uid="uid://doh5e2nt8r8vb" path="res://Assets/janelaAzulVidro.png" id="5_n3rgw"]
@@ -17,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dyd6lilkm8d8p" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
 [ext_resource type="PackedScene" uid="uid://c5g7lpxb5k88k" path="res://Assets/MicrondA/Microndas.blend" id="15_4tel5"]
 [ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
+[ext_resource type="PackedScene" uid="uid://d08esp0uw1wvh" path="res://Assets/Cadeira Gamer/Cadeira Gamer.blend" id="18_ssgdo"]
 [ext_resource type="PackedScene" uid="uid://dxnpawvw1citv" path="res://Assets/Estante/Estante.blend" id="19_r0iut"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
@@ -351,6 +351,9 @@ size = Vector3(1, 4.355, 3.375)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hrhuf"]
 size = Vector3(2.535, 5.49, 3.59)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i23ay"]
+size = Vector3(2.71, 4.875, 4.365)
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ssgdo")
 
@@ -494,8 +497,18 @@ debug_color = Color(0.96168846, 1.540184e-06, 0.51167804, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.599873, 5.9811506, 12.0260105)
 size = Vector3(9.880615, 1, 12.653099)
 
-[node name="Cadeira Gamer colorido" parent="." instance=ExtResource("3_oq3mb")]
+[node name="Cadeira Gamer colorido" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, -24.956905, 0, -4.58801)
+script = null
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cadeira Gamer colorido"]
 
@@ -712,6 +725,23 @@ shape = SubResource("BoxShape3D_kqisk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1542563, 0)
 shape = SubResource("BoxShape3D_hrhuf")
 
+[node name="Cadeira Gamer" parent="." instance=ExtResource("18_ssgdo")]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, -25.54293, 0.22949386, -4.564877)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cadeira Gamer"]
+transform = Transform3D(-3.6426152e-07, 0, 8.333334, 0, 8.333334, 0, -8.333334, 0, -3.6426152e-07, 38.04064, -1.9124491, -212.85779)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cadeira Gamer/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.241919, 1.9890876, -4.6659274)
+shape = SubResource("BoxShape3D_i23ay")
+
+[node name="InteracaoMesa" type="Area3D" parent="Cadeira Gamer"]
+transform = Transform3D(-3.642613e-07, 0, 8.333334, 0, 8.333334, 0, -8.333334, 0, -3.642613e-07, -2.2131615, -1.9124501, 0.79200745)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cadeira Gamer/InteracaoMesa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6204815, 1.9890876, 0.19210434)
+shape = SubResource("BoxShape3D_i23ay")
+
 [connection signal="body_entered" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_entered"]
 [connection signal="body_exited" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_exited"]
 [connection signal="body_entered" from="BedroomCameraTrigger" to="." method="entered_bedroom"]
@@ -742,3 +772,5 @@ shape = SubResource("BoxShape3D_hrhuf")
 [connection signal="body_exited" from="Estante/InteracaoEstante" to="." method="_on_interacao_estante_body_exited"]
 [connection signal="body_entered" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_entered"]
 [connection signal="body_exited" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_exited"]
+[connection signal="body_entered" from="Cadeira Gamer/InteracaoMesa" to="." method="_on_interacao_mesa_body_entered"]
+[connection signal="body_exited" from="Cadeira Gamer/InteracaoMesa" to="." method="_on_interacao_mesa_body_exited"]
