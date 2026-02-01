@@ -1,21 +1,106 @@
 [gd_scene format=3 uid="uid://b42lwa1rgiwpt"]
 
 [ext_resource type="Script" uid="uid://bfh6fa2u44115" path="res://Scenes/Natalia/natalia.gd" id="1_mgsjn"]
-[ext_resource type="Texture2D" uid="uid://ftuxa8xn7pgk" path="res://Assets/m.png" id="2_y7g5m"]
+[ext_resource type="Texture2D" uid="uid://cc3lo26ti41cm" path="res://Assets/animacoes/natalia/natalia - andar - costas.png" id="2_5k0us"]
+[ext_resource type="Texture2D" uid="uid://mhpbcqgk5giv" path="res://Assets/animacoes/natalia/natalia - andar - frente.png" id="3_cpjqi"]
+[ext_resource type="Texture2D" uid="uid://banj0tj0keujd" path="res://Assets/animacoes/natalia/natalia - andar - lado.png" id="4_n7fkc"]
+[ext_resource type="Texture2D" uid="uid://ccgrjtedmoo5w" path="res://Assets/animacoes/natalia/natalia - costas - idle.png" id="5_834b3"]
+[ext_resource type="Texture2D" uid="uid://bhqkf6f7cb18e" path="res://Assets/animacoes/natalia/natalia - frente - idle.png" id="6_5ibt0"]
+[ext_resource type="Texture2D" uid="uid://ca1gun2eiih0e" path="res://Assets/animacoes/natalia/natalia - lado - idle.png" id="7_yjtse"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e15r6"]
+atlas = ExtResource("2_5k0us")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3h7b"]
+atlas = ExtResource("2_5k0us")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s12ai"]
+atlas = ExtResource("3_cpjqi")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnsvh"]
+atlas = ExtResource("3_cpjqi")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvg33"]
+atlas = ExtResource("4_n7fkc")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th1pi"]
+atlas = ExtResource("4_n7fkc")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwk35"]
+atlas = ExtResource("5_834b3")
+region = Rect2(0, 0, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j441j"]
+atlas = ExtResource("6_5ibt0")
+region = Rect2(0, 0, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pi2x"]
+atlas = ExtResource("7_yjtse")
+region = Rect2(0, 0, 23, 44)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sovmv"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e15r6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3h7b")
+}],
 "loop": true,
-"name": &"default",
+"name": &"andar_costas",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_y7g5m")
+"texture": SubResource("AtlasTexture_s12ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnsvh")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"andar_frente",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvg33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_th1pi")
+}],
+"loop": true,
+"name": &"andar_lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwk35")
+}],
+"loop": true,
+"name": &"idle_costas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j441j")
+}],
+"loop": true,
+"name": &"idle_frente",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pi2x")
+}],
+"loop": true,
+"name": &"idle_lado",
 "speed": 5.0
 }]
 
@@ -32,8 +117,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.679438, 0)
 pixel_size = 0.09
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_sovmv")
-animation = &"new_animation"
-autoplay = "new_animation"
+animation = &"andar_lado"
+autoplay = "idle_frente"
+frame_progress = 0.37302607
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05967708, 1.6605868, -0.012311816)
