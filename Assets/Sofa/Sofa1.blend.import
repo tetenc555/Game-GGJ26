@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b5f7liekcuf6n"
-path="res://.godot/imported/Sofa.blend-7a716ec9b9ee68876cd29c766deee8e5.scn"
+uid="uid://d3r8j60kg65dw"
+path="res://.godot/imported/Sofa1.blend-b30526d775b0dc6975b71c74c1e820ff.scn"
 
 [deps]
 
-source_file="res://Assets/Sofa/Sofa.blend"
-dest_files=["res://.godot/imported/Sofa.blend-7a716ec9b9ee68876cd29c766deee8e5.scn"]
+source_file="res://Assets/Sofa/Sofa1.blend"
+dest_files=["res://.godot/imported/Sofa1.blend-b30526d775b0dc6975b71c74c1e820ff.scn"]
 
 [params]
 
