@@ -1,5 +1,7 @@
 extends CharacterBody3D
+@onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 
+var last_direction = "frente"
 var input_locked:= false
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -28,7 +30,31 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-
-
-func animation():
-	pass
+	
+	if input_dir.x == 0 and input_dir.y == 0:
+		if(last_direction == "frente"):
+			sprite.play("idle_frente")
+		elif(last_direction == "esquerda"):
+			sprite.play("idle_lado")
+			sprite.flip_h = true;
+		elif(last_direction == "direita"):
+			sprite.play("idle_lado")
+			sprite.flip_h = false;
+		elif(last_direction == "costas"):
+			sprite.play("idle_costas")
+	else:
+		if input_dir.x > 0:
+			last_direction = "direita"
+			sprite.play("andar_lado")
+			sprite.flip_h = false;
+		elif input_dir.x < 0:
+			last_direction = "esquerda"
+			sprite.play("andar_lado")
+			sprite.flip_h = true;
+		elif input_dir.y < 0:
+			last_direction = "costas"
+			sprite.play("andar_costas")
+		elif input_dir.y > 0:
+			last_direction = "frente"
+			sprite.play("andar_frente")	
+		
