@@ -33,7 +33,7 @@ func display_text(t: String):
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	_display_letter()
 
-
+#pra comitar
 func _display_letter():
 	if letter_index >= text.length():
 		is_typing = false
