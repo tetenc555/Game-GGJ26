@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://7hft04d4k5f6" path="res://Assets/Cabeceira e Cama/Cabeceira e Cama.blend" id="5_ouqb2"]
 [ext_resource type="PackedScene" uid="uid://doudba0quumuo" path="res://Assets/Geladeira/Geladeira.blend" id="6_vmc43"]
 [ext_resource type="PackedScene" uid="uid://mgddkmxq8lwd" path="res://Assets/Armario de Roupa/Armario de Roupa.blend" id="6_xk6e0"]
-[ext_resource type="PackedScene" uid="uid://b5f7liekcuf6n" path="res://Assets/Sofa/Sofa.blend" id="7_qko4a"]
 [ext_resource type="PackedScene" uid="uid://51gycbjbsn68" path="res://Assets/Maquina de Roupa/Lava-roupa.blend" id="7_yfhgd"]
 [ext_resource type="PackedScene" uid="uid://cuc1p3s5mffi1" path="res://Assets/Pia/Pia.blend" id="8_3gews"]
 [ext_resource type="PackedScene" uid="uid://btkvw1bvu8ugb" path="res://Assets/Banco/Banco.blend" id="8_qko4a"]
 [ext_resource type="PackedScene" uid="uid://cgjp6n6106qqk" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
+[ext_resource type="PackedScene" uid="uid://d3r8j60kg65dw" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -273,9 +273,6 @@ size = Vector3(1.3172989, 7.5077515, 1.3470459)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vmc43"]
 size = Vector3(4.651367, 7.5022583, 3.3577576)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3gews"]
-size = Vector3(11.852875, 2.4331055, 5.076538)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_trdd2"]
 size = Vector3(12.783417, 3.715393, 6.735962)
 
@@ -284,6 +281,12 @@ size = Vector3(4.8554535, 5.3606567, 4.725586)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l0lye"]
 size = Vector3(3.3554688, 3.7038574, 3.1401062)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4tel5"]
+size = Vector3(11.397949, 5.7941895, 4.7094727)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gews"]
+size = Vector3(10.332275, 5.6752014, 2.5114746)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qko4a"]
 size = Vector3(14.83078, 4.831543, 9.09668)
@@ -324,6 +327,9 @@ material = SubResource("StandardMaterial3D_ouqb2")
 
 [node name="P-S-E" type="CSGBox3D" parent="." unique_id=999183506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.865013, 3.4841967, 0.9838772)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
 size = Vector3(0.068847656, 6.4263306, 34.5616)
 material = SubResource("StandardMaterial3D_qko4a")
 
@@ -332,11 +338,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.597, 0, 12.239705)
 size = Vector3(9.880615, 1, 12.196922)
 
 [node name="P-S-N" type="CSGBox3D" parent="." unique_id=14124546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4640608, 3.2601848, -16.163532)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4411583, 3.2601848, -16.163532)
+sorting_offset = -6.0
 use_collision = true
 collision_layer = 2
 collision_mask = 3
-size = Vector3(18.338242, 6.4263306, 0.13683319)
+size = Vector3(18.48748, 6.4263306, 0.13683319)
 material = SubResource("ShaderMaterial_trdd2")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=983302218]
@@ -346,7 +353,7 @@ material = SubResource("ShaderMaterial_l0lye")
 
 [node name="P-S-W" type="CSGBox3D" parent="." unique_id=1479889664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.531374, 3.2601848, 1.0065613)
-sorting_offset = -3.0
+sorting_offset = -4.0
 use_collision = true
 collision_layer = 2
 size = Vector3(0.35675633, 6.4263306, 34.401062)
@@ -474,16 +481,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26322556, 3.2511292, -0.305
 shape = SubResource("BoxShape3D_vmc43")
 debug_color = Color(0.785974, 0.2976024, 0.78994936, 0.41960785)
 
-[node name="Sofa" parent="." unique_id=758715556 instance=ExtResource("7_qko4a")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.1479754, 1.304606, -7.141779)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Sofa" unique_id=1196893500]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa/StaticBody3D" unique_id=479164406]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0636363, 0.28219843, 0.3611927)
-shape = SubResource("BoxShape3D_3gews")
-debug_color = Color(0.9166872, 7.57578e-05, 0.7101964, 0.41960785)
-
 [node name="Pia" parent="." unique_id=789624909 instance=ExtResource("8_3gews")]
 transform = Transform3D(-0.6, 0, -4.5298744e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.3, -1.0635757, 0, 16.795347)
 
@@ -513,6 +510,25 @@ transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4717369, 2.5697541, 0.7279701)
 shape = SubResource("BoxShape3D_l0lye")
 debug_color = Color(0.8874474, 0.0953918, 0.76514703, 0.41960785)
+
+[node name="Sofa1" parent="." unique_id=1642359241 instance=ExtResource("10_3gews")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.355805, 0.61956596, -9.92301)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sofa1" unique_id=1617558526]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa1/StaticBody3D" unique_id=1492124388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46801758, 2.1289954, 0.51538086)
+shape = SubResource("BoxShape3D_4tel5")
+debug_color = Color(0.92959297, 3.0611158e-05, 0.6621145, 0.41960785)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sofa1" unique_id=297616546]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa1/StaticBody3D2" unique_id=740528545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09070301, 2.978684, -11.019127)
+shape = SubResource("BoxShape3D_3gews")
+debug_color = Color(0.8448892, 0.0010269177, 0.9132927, 0.41960785)
 
 [node name="Banco" parent="." unique_id=690478026 instance=ExtResource("8_qko4a")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.4238937, -4.7683716e-07, 5.710644)
