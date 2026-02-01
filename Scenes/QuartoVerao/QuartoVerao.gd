@@ -4,7 +4,15 @@ var id: String = ""
 var interactionLocked: bool = false
 var playerPodeInteragir: bool = false
 var paredeQuarto
+var natalia_scene = preload("res://Scenes/Natalia/natalia.tscn")
 
+
+func spawn_natalia(Vector: Vector3):
+	var natalia = natalia_scene.instantiate()
+	natalia.global_position = Vector
+	natalia.rotation_degrees.x=-15;
+	natalia.rotation_degrees.y=90
+	get_tree().current_scene.add_child(natalia)
 
 
 func trocaIDEntrada(idPar: String, body: Node3D) -> void:
@@ -44,6 +52,11 @@ func _ready():
 	await SceneController.fade(1.0)
 	$mascara1.queue_free()
 	await SceneController.fade(0.0)
+	InteractionManager.start_dialog_from_object("DialogoQuartoVerao", posicao_dialogo)
+	await DialogManager.dialog_finished
+	await spawn_natalia(Vector3(-15.019, 0.801, -5.781))
+	InteractionManager.start_dialog_from_object("DialogoQuartoVerao2", posicao_dialogo)
+	
 	
 
 func entered_bedroom(body: Node3D) -> void:
@@ -179,13 +192,11 @@ func _on_interacao_banheiro_body_entered(body):
 func _on_interacao_banheiro_body_exited(body):
 	trocaIDSaida("banheiroGeral",body);
 	
-func _on_trigger_narrador_4_body_entered(body: Node3D) -> void:
-	var screen_size = get_viewport().get_visible_rect().size
-	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
-	InteractionManager.start_dialog_from_object("Narrador3", posicao_dialogo)
 	
-
-
 func _on_interacao_troca_cena_body_entered(body: Node3D) -> void:
 	if(body.is_in_group("player")):
+		var screen_size = get_viewport().get_visible_rect().size
+		var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
+		InteractionManager.start_dialog_from_object("Narrador3", posicao_dialogo)
+		await DialogManager.dialog_finished
 		SceneController.change_scene("res://Scenes/QuartoInverno/QuartoInverno.tscn")

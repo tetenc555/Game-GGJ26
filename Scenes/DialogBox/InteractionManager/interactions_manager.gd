@@ -31,10 +31,7 @@ var dialogs: Dictionary  = {
 "Sophia - “Mas é claro que isso é impossível para a miss simpatia, ela não consegue não estar no centro das atenções.”",
 "Sophia se deita cansada na cama do casal, agora mais vazia que o normal.",
 "Ela pensa sobre os acontecimentos, tentando entender tudo o que aconteceu, mas algo chama sua atenção, sua máscara do baile está brilhando.",
-"Ao se aproximar e pegar a máscara em suas mãos um sentimento surge, é como se a máscara a chamasse..."]),
-
-"PegaMascara1": PackedStringArray([
-"Sophia aproxima a máscara de seu rosto e a encaixa.",
+"Ao se aproximar e pegar a máscara em suas mãos um sentimento surge, é como se a máscara a chamasse...","Sophia aproxima a máscara de seu rosto e a encaixa.",
 "Uma luz intensa toma conta de seus olhos, Sophia sente por um breve momento a sensação de estar voando e no instante seguinte se vê novamente em seu quarto, mas algo não parece certo."
 ]),
 
@@ -42,8 +39,10 @@ var dialogs: Dictionary  = {
 "Celular vibra: notificação “sincronização de horário completa: data 31/01/2025”",
 "Sophia - “O que está acontecendo??”",
 "Sophia - “Isso só pode estar errado, hoje é 31/01/2026”",
-"Sophia olha ao redor e inicialmente tudo parece normal até que..."
-,"Natalia - “Oii amor”",
+"Sophia olha ao redor e inicialmente tudo parece normal até que..."]),
+
+"DialogoQuartoVerao2": PackedStringArray([
+"Natalia - “Oii amor”",
 "Natalia se aproxima de Sophia e lhe dá um beijo.",
 "Sophia - “AMOR? Você acabou de brigar comigo e me abandonou sozinha aqui.”",
 "Natalia - “Do que você está falando? Acho que você teve algum tipo de pesadelo.”",
@@ -54,9 +53,7 @@ var dialogs: Dictionary  = {
 
 #Narador 3 leva ao inverno, trigger saindo do quarto, colocar depois do dialogo tambem
 "Narrador3": PackedStringArray([
-"Depois de repassar por todo seu quarto, Sophia volta sua atenção para a máscara, seu brilho permanece e chama sua atenção."]),
-"Narrador3.5": PackedStringArray([
-"Novamente Sophia coloca a máscara e o sentimento de estar voando retorna."]),
+"Depois de repassar por todo seu quarto, Sophia volta sua atenção para a máscara, seu brilho permanece e chama sua atenção.","Novamente Sophia coloca a máscara e o sentimento de estar voando retorna."]),
 
 "Narrador4": PackedStringArray([
 "Novamente Sophia se vê em seu quarto, mas agora definitivamente algo mudou."
