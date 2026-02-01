@@ -46,6 +46,9 @@ func _on_dialog_finished():
 func _ready():
 	DialogManager.dialog_finished.connect(_on_dialog_finished)
 	paredeQuarto=$"P-S-W"
+	var screen_size = get_viewport().get_visible_rect().size
+	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
+	InteractionManager.start_dialog_from_object("ComecoFinal", posicao_dialogo)
 
 	
 

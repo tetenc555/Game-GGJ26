@@ -95,9 +95,11 @@ var dialogs: Dictionary  = {
 
 "drama": PackedStringArray(["Celular vibra: notificação “sincronização de horário completa: data 01/02/2026.”"
 ]),
-#ARRUMARDAQUI PRA BAIXO
+"ComecoFinal": PackedStringArray(["Sophia percebe que está de volta em casa e no momento certo, ao ver Natalia no quarto."]),
+
 "NarradorFinal1": PackedStringArray([
-"Sophia percebe que está de volta em casa e no momento certo."
+	
+	"Ao entrar, Natalia está sentada na cama, como se a esperasse.","Natalia - Onde você estava?"
 ,"Sophia - “Sinceramente... Acho que a pergunta certa seria, quando eu estava.”",
 "Sophia - “Gostaria de conversar... Se você quiser.”",
 "Sophia - “Eu entendi que acabei te machucando várias vezes, sem perceber.”",
