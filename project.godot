@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ggj26"
-run/main_scene="uid://dp6o15xpe0646"
+run/main_scene="uid://b2jk11veho2ly"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 DialogManager="*uid://c7dxodymsa3vx"
 InteractionManager="*uid://b22ydtep7r0jo"
+GameController="*uid://kkk30k4aaawb"
+SceneController="*uid://ue8enaw2yia"
+
+[display]
+
+window/subwindows/embed_subwindows=false
 
 [input]
 

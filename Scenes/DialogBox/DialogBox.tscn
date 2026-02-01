@@ -1,29 +1,36 @@
 [gd_scene format=3 uid="uid://b0n8hyy2obu4c"]
 
 [ext_resource type="Script" uid="uid://ttgkdoac0ld6" path="res://Scenes/DialogBox/dialogbox.gd" id="1_efy2g"]
-[ext_resource type="Texture2D" uid="uid://c0ttnuebtg6nb" path="res://Assets/placeholder_textbox.png" id="2_vahsa"]
+[ext_resource type="Texture2D" uid="uid://drtrk8ge8xk7e" path="res://Assets/UI-Dialog-box2.png" id="2_efy2g"]
 
 [node name="MarginContainer" type="MarginContainer" unique_id=1248785506]
 offset_right = 70.0
 offset_bottom = 69.0
+size_flags_vertical = 0
 script = ExtResource("1_efy2g")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=934189588]
+texture_filter = 1
+texture_repeat = 2
 layout_mode = 2
-texture = ExtResource("2_vahsa")
+texture = ExtResource("2_efy2g")
+region_rect = Rect2(2, 2, 20, 20)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1076044888]
+custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1403858389]
+[node name="RichLabel" type="RichTextLabel" parent="MarginContainer" unique_id=109673038]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
-vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.021434637, 0.021434635, 0.021434633, 0.8352941)
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
 
 [node name="LetterDisplayTimer" type="Timer" parent="." unique_id=742078548]
 

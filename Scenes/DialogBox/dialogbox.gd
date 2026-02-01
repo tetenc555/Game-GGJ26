@@ -1,11 +1,11 @@
 extends MarginContainer
 
-@onready var label = $MarginContainer/Label
+@onready var label = $MarginContainer/RichLabel
 @onready var timer = $LetterDisplayTimer
 
 signal finishedDisplaying
 
-const MAX_WIDTH = 256
+const MAX_WIDTH = 1024
 
 var text := ""
 var letter_index := 0
@@ -14,10 +14,12 @@ var is_typing := false
 var letter_time := 0.03
 var space_time := 0.01
 var punctuation_time := 0.08
-
+var input_locked:= false
 
 func _ready():
 	timer.timeout.connect(_on_timer_timeout)
+	label.bbcode_enabled = false
+	label.fit_content = true
 
 
 func display_text(t: String):
@@ -26,9 +28,9 @@ func display_text(t: String):
 	letter_index = 0
 	is_typing = true
 	
-	await get_tree().process_frame  # garante layout
-	custom_minimum_size.x = min(size.x, MAX_WIDTH)
-
+	await get_tree().process_frame
+	label.custom_minimum_size.x = MAX_WIDTH
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	_display_letter()
 
 
