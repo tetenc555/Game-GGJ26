@@ -161,7 +161,24 @@ func _on_interacao_armario_body_entered(body: Node3D) -> void:
 func _on_interacao_armario_body_exited(body: Node3D) -> void:
 	trocaIDSaida("armarioVerao",body);
 
+func _on_interacao_estante_body_entered(body):
+	trocaIDEntrada("estanteVerao",body);
 
+func _on_interacao_estante_body_exited(body):
+	trocaIDSaida("estanteVerao",body);
+
+func _on_interacao_janela_body_entered(body):
+	trocaIDEntrada("janelaVerao",body);
+
+func _on_interacao_janela_body_exited(body):
+	trocaIDSaida("janelaVerao",body);
+
+func _on_interacao_banheiro_body_entered(body):
+	trocaIDEntrada("banheiroGeral",body);
+
+func _on_interacao_banheiro_body_exited(body):
+	trocaIDSaida("banheiroGeral",body);
+	
 func _on_trigger_narrador_4_body_entered(body: Node3D) -> void:
 	var screen_size = get_viewport().get_visible_rect().size
 	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)

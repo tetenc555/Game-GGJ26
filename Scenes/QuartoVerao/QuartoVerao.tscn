@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dp6o15xpe0646"]
+[gd_scene load_steps=66 format=3 uid="uid://dp6o15xpe0646"]
 
 [ext_resource type="Script" uid="uid://0xfv4oqy028d" path="res://Scenes/QuartoVerao/QuartoVerao.gd" id="1_6d1t3"]
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="1_7q7q3"]
@@ -261,6 +261,9 @@ texture_filter = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq3mb"]
 albedo_color = Color(0.39492178, 0.18668509, 0.026893586, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hevjj"]
+size = Vector3(2.1, 5.51, 2.92)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6d1t3"]
 size = Vector3(16.026855, 1, 16.474487)
 
@@ -340,6 +343,18 @@ size = Vector3(1.496582, 8.495728, 5.0164795)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hngxe"]
 size = Vector3(0.44885254, 0.76474, 0.9180603)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8t3ym"]
+size = Vector3(1, 4.355, 3.375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ow6h3"]
+size = Vector3(2.535, 5.49, 3.59)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43vj6"]
+size = Vector3(6.18, 17.815, 2.185)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e4h06"]
+size = Vector3(7.89, 10.605, 5.795)
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_6d1t3")
 
@@ -355,7 +370,7 @@ fov = 31.8
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_7q7q3")]
 transform = Transform3D(-4.371139e-08, -0.17364818, 0.9848077, 0, 0.9848077, 0.17364818, -1, 7.590403e-09, -4.304731e-08, -19.332071, 1.0624936, -0.19549966)
 collision_priority = 2.0
 
@@ -405,15 +420,20 @@ collision_layer = 2
 size = Vector3(0.35675633, 6.4263306, 34.401062)
 material = SubResource("StandardMaterial3D_6wwey")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="P-S-W" unique_id=557977231]
+[node name="CSGBox3D3" type="CSGBox3D" parent="P-S-W"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09004402, 0.8911786, -14.782867)
 size = Vector3(0.43798828, 2.8793907, 2.556479)
 material = SubResource("StandardMaterial3D_61jyq")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="P-S-W" unique_id=1232342871]
+[node name="CSGBox3D" type="CSGBox3D" parent="P-S-W"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29330826, 8.885585)
 size = Vector3(1, 4.791, 2.3297548)
 material = SubResource("StandardMaterial3D_oq3mb")
+
+[node name="InteracaoBanheiro" type="Area3D" parent="P-S-W/CSGBox3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="P-S-W/CSGBox3D/InteracaoBanheiro"]
+shape = SubResource("BoxShape3D_hevjj")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="P-S-W"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38717937, -6.7563696)
@@ -595,7 +615,7 @@ debug_color = Color(0.8874474, 0.0953918, 0.76514703, 0.41960785)
 transform = Transform3D(0.99999976, 0, -2.842171e-14, 0, 0.99999976, 0, 2.842171e-14, 0, 0.99999976, 0.4427948, 3.044157, 2.2668457)
 shape = SubResource("BoxShape3D_hnn5l")
 
-[node name="Sofa1" parent="." unique_id=1234298865 instance=ExtResource("10_3gews")]
+[node name="Sofa1" parent="." instance=ExtResource("10_3gews")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.355805, 0.61956596, -9.92301)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sofa1"]
@@ -644,19 +664,19 @@ debug_color = Color(0.8750734, 0.00043413937, 0.83804786, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03875661, 4.593399, -3.196926)
 shape = SubResource("BoxShape3D_lfxlb")
 
-[node name="mascara1" parent="." unique_id=119453555 instance=ExtResource("15_61jyq")]
+[node name="mascara1" parent="." instance=ExtResource("15_61jyq")]
 transform = Transform3D(-0.35000002, -0.12603976, 0.5929705, 0, 0.68470335, 0.14553818, -0.60621774, 0.072769105, -0.3423517, -21.674578, 2.1311731, 3.0104613)
 
-[node name="mascara2" parent="." unique_id=438935092 instance=ExtResource("15_61jyq")]
+[node name="mascara2" parent="." instance=ExtResource("15_61jyq")]
 transform = Transform3D(-0.26519305, 0.09851634, -0.400084, -0.0677618, 0.45888206, 0.1579102, 0.4064246, 0.14079, -0.23472793, -4.104665, 2.5887103, 7.1860085)
 
-[node name="InteracaoTrocaCena" type="Area3D" parent="mascara2" unique_id=1420556025]
+[node name="InteracaoTrocaCena" type="Area3D" parent="mascara2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mascara2/InteracaoTrocaCena" unique_id=1592031296]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mascara2/InteracaoTrocaCena"]
 transform = Transform3D(1, 2.9802322e-08, -5.9604645e-08, -2.8312206e-07, 1, -8.940697e-08, 0, 4.4703484e-08, 0.99999994, 0.33386326, -1.4205627, -0.9197173)
 shape = SubResource("BoxShape3D_n0bmq")
 
-[node name="Armario de Roupa" parent="." unique_id=499509915 instance=ExtResource("6_xk6e0")]
+[node name="Armario de Roupa" parent="." instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Armario de Roupa"]
@@ -677,9 +697,38 @@ transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08
 [node name="Janela" parent="." instance=ExtResource("16_o85xk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.285017, 2.4030075, -13.647022)
 
-[node name="Estante" parent="." unique_id=699559287 instance=ExtResource("19_r0iut")]
+[node name="StaticBody3D" type="StaticBody3D" parent="Janela"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Janela/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7613106, 0)
+shape = SubResource("BoxShape3D_8t3ym")
+
+[node name="InteracaoJanela" type="Area3D" parent="Janela"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Janela/InteracaoJanela"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1542563, 0)
+shape = SubResource("BoxShape3D_ow6h3")
+
+[node name="Estante" parent="." instance=ExtResource("19_r0iut")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -11.045947, 0.9778495, 0)
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Estante"]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Estante/StaticBody3D"]
+shape = SubResource("BoxShape3D_43vj6")
+
+[node name="InteracaoEstante" type="Area3D" parent="Estante"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Estante/InteracaoEstante"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.342803, 0)
+shape = SubResource("BoxShape3D_e4h06")
+
+[connection signal="body_entered" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_entered"]
+[connection signal="body_exited" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_exited"]
 [connection signal="body_entered" from="BedroomCameraTrigger" to="." method="entered_bedroom"]
 [connection signal="body_exited" from="BedroomCameraTrigger" to="." method="exited_bedroom"]
 [connection signal="body_entered" from="Cadeira Gamer colorido/InteracaoMesa" to="." method="_on_interacao_mesa_body_entered"]
@@ -705,3 +754,7 @@ transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-
 [connection signal="body_entered" from="mascara2/InteracaoTrocaCena" to="." method="_on_interacao_troca_cena_body_entered"]
 [connection signal="body_entered" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_entered"]
 [connection signal="body_exited" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_exited"]
+[connection signal="body_entered" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_entered"]
+[connection signal="body_exited" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_exited"]
+[connection signal="body_entered" from="Estante/InteracaoEstante" to="." method="_on_interacao_estante_body_entered"]
+[connection signal="body_exited" from="Estante/InteracaoEstante" to="." method="_on_interacao_estante_body_exited"]
