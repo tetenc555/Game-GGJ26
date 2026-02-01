@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp6o15xpe0646"]
 
-[ext_resource type="Script" uid="uid://0xfv4oqy028d" path="res://Scenes/QuartoVerao/QuartoVerao.gd" id="1_6d1t3"]
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="1_7q7q3"]
+[ext_resource type="Script" uid="uid://b0gb5nal55slc" path="res://Scenes/QuartoInverno/QuartoInverno.gd" id="1_ssgdo"]
 [ext_resource type="PackedScene" uid="uid://ddpb7muitv5sm" path="res://Assets/Abajur/Abajur.blend" id="3_6wwey"]
 [ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="3_oq3mb"]
 [ext_resource type="Texture2D" uid="uid://tvb1t3viww34" path="res://Assets/chaoSala.png" id="3_trdd2"]
@@ -336,7 +336,7 @@ size = Vector3(1.496582, 8.495728, 5.0164795)
 size = Vector3(0.44885254, 0.76474, 0.9180603)
 
 [node name="Node3D" type="Node3D" unique_id=1740440265]
-script = ExtResource("1_6d1t3")
+script = ExtResource("1_ssgdo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1223002260]
 environment = SubResource("Environment_6wwey")
