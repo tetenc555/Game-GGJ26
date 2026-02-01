@@ -4,8 +4,6 @@ var interactionLocked: bool = false
 var playerPodeInteragir: bool = false
 var paredeQuarto
 
-@onready var natalia:= $CharacterBody3D
-
 func trocaIDEntrada(idPar: String, body: Node3D) -> void:
 	if (body.is_in_group("player") && idPar!=""):
 		id = idPar
@@ -32,14 +30,15 @@ func _process(delta):
 		InteractionManager.start_dialog_from_object(id, posicao_dialogo)
 
 func _ready():
-	natalia.get_node("AnimatedSprite3D").play("idle_costas")
-	
 	DialogManager.dialog_finished.connect(_on_dialog_finished)
 	var screen_size = get_viewport().get_visible_rect().size
 	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
-	InteractionManager.start_dialog_from_object("Narrador1", posicao_dialogo)
+	InteractionManager.start_dialog_from_object("NarradorBaileVazio",posicao_dialogo)
 	await DialogManager.dialog_finished
 	get_tree().current_scene.visible = false
-	InteractionManager.start_dialog_from_object("Narrador2", posicao_dialogo)
+	InteractionManager.start_dialog_from_object("drama",posicao_dialogo)
 	await DialogManager.dialog_finished
-	SceneController.change_scene("res://Scenes/QuartoVerao/QuartoVerao.tscn")
+	SceneController.change_scene("res://Scenes/QuartoReconciliacao/QuartoReconciliacao.tscn")
+
+
+	
