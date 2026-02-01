@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl1e27u2awici"
-path.s3tc="res://.godot/imported/Plane.001 Base Color.png-1f975996ebbc8b2e269786ec8f94d85f.s3tc.ctex"
+uid="uid://dwyk5t1pv3p6d"
+path.s3tc="res://.godot/imported/Cube Base Color.png-aab7ceed7a7cc36d0902c6365b72d788.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/janela1/Plane.001 Base Color.png"
-dest_files=["res://.godot/imported/Plane.001 Base Color.png-1f975996ebbc8b2e269786ec8f94d85f.s3tc.ctex"]
+source_file="res://Assets/janelaBaile/Cube Base Color.png"
+dest_files=["res://.godot/imported/Cube Base Color.png-aab7ceed7a7cc36d0902c6365b72d788.s3tc.ctex"]
 
 [params]
 
