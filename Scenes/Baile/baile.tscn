@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b06qtbqxijld1"]
 
 [ext_resource type="Texture2D" uid="uid://de52n8d4cnccv" path="res://Assets/chaoBaile.png" id="1_in1sx"]
+[ext_resource type="Script" uid="uid://b8mgvqggmlb1k" path="res://Scenes/Baile/baile.gd" id="1_mm87h"]
 [ext_resource type="Texture2D" uid="uid://dqjmpn4if8ntw" path="res://Assets/paredeBaile.png" id="2_mm87h"]
 [ext_resource type="PackedScene" uid="uid://bhl42lu8mpu0d" path="res://Assets/janelaBaile/Janela1Baile.blend" id="3_1cae1"]
 [ext_resource type="Texture2D" uid="uid://camhwv2i6wgvh" path="res://Assets/janelaBaileVidro.png" id="4_uvd7u"]
@@ -21,6 +22,7 @@ albedo_texture = ExtResource("4_uvd7u")
 texture_filter = 0
 
 [node name="Node3D" type="Node3D" unique_id=1759705652]
+script = ExtResource("1_mm87h")
 
 [node name="Chao" type="CSGBox3D" parent="." unique_id=1599690359]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0.00830479, -0.131)
