@@ -2,8 +2,8 @@ extends Node
 
 
 var dialogs: Dictionary  = {
-	"abajur" : PackedStringArray(["ãoooooo", "anmçião","sexo3"]),
-	"mesa": PackedStringArray(["Essa é minha mesa de trabalho, no tempo livre gosto de jogar jogos de fazendinha"])
+	"mesaTrabalhoVerao": PackedStringArray(["Essa é minha mesa de trabalho, no tempo livre gosto de jogar jogos de fazendinha"]),
+	"camaVerao": PackedStringArray(["A cama já não parece tão vazia, quanto algum tempo atras"]),
 }
 
 func start_dialog_from_object(object_name: String, world_position: Vector2):
