@@ -13,11 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://51gycbjbsn68" path="res://Assets/Maquina de Roupa/Lava-roupa.blend" id="7_yfhgd"]
 [ext_resource type="PackedScene" uid="uid://cuc1p3s5mffi1" path="res://Assets/Pia/Pia.blend" id="8_3gews"]
 [ext_resource type="PackedScene" uid="uid://btkvw1bvu8ugb" path="res://Assets/Banco/Banco.blend" id="8_qko4a"]
-[ext_resource type="PackedScene" uid="uid://cgjp6n6106qqk" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
-[ext_resource type="PackedScene" uid="uid://d3r8j60kg65dw" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
+[ext_resource type="PackedScene" uid="uid://cfg6rph2bo4t1" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
+[ext_resource type="PackedScene" uid="uid://dyd6lilkm8d8p" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
 [ext_resource type="PackedScene" uid="uid://c5g7lpxb5k88k" path="res://Assets/MicrondA/Microndas.blend" id="15_4tel5"]
 [ext_resource type="PackedScene" uid="uid://dvr7238mhvt4a" path="res://Assets/mascara/mascara1.blend" id="15_61jyq"]
 [ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
+[ext_resource type="PackedScene" uid="uid://dxnpawvw1citv" path="res://Assets/Estante/Estante.blend" id="19_r0iut"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -329,6 +330,9 @@ size = Vector3(14.83078, 4.831543, 9.09668)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxlb"]
 size = Vector3(23.648804, 7.7231445, 12.940643)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_n0bmq"]
+size = Vector3(4.1047363, 5.7632446, 10.140106)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7ql7"]
 size = Vector3(1.496582, 8.495728, 5.0164795)
 
@@ -590,7 +594,7 @@ debug_color = Color(0.8874474, 0.0953918, 0.76514703, 0.41960785)
 transform = Transform3D(0.99999976, 0, -2.842171e-14, 0, 0.99999976, 0, 2.842171e-14, 0, 0.99999976, 0.4427948, 3.044157, 2.2668457)
 shape = SubResource("BoxShape3D_hnn5l")
 
-[node name="Sofa1" parent="." unique_id=1642359241 instance=ExtResource("10_3gews")]
+[node name="Sofa1" parent="." unique_id=1234298865 instance=ExtResource("10_3gews")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.355805, 0.61956596, -9.92301)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sofa1" unique_id=1617558526]
@@ -643,6 +647,12 @@ transform = Transform3D(-0.35000002, -0.12603976, 0.5929705, 0, 0.68470335, 0.14
 [node name="mascara2" parent="." unique_id=438935092 instance=ExtResource("15_61jyq")]
 transform = Transform3D(-0.26519305, 0.09851634, -0.400084, -0.0677618, 0.45888206, 0.1579102, 0.4064246, 0.14079, -0.23472793, -4.104665, 2.5887103, 7.1860085)
 
+[node name="InteracaoTrocaCena" type="Area3D" parent="mascara2" unique_id=1420556025]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mascara2/InteracaoTrocaCena" unique_id=1592031296]
+transform = Transform3D(1, 2.9802322e-08, -5.9604645e-08, -2.8312206e-07, 1, -8.940697e-08, 0, 4.4703484e-08, 0.99999994, 0.33386326, -1.4205627, -0.9197173)
+shape = SubResource("BoxShape3D_n0bmq")
+
 [node name="Armario de Roupa" parent="." unique_id=499509915 instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)
 
@@ -663,6 +673,9 @@ transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08
 
 [node name="Janela" parent="." unique_id=1141335337 instance=ExtResource("16_o85xk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.285017, 2.4030075, -13.647022)
+
+[node name="Estante" parent="." unique_id=699559287 instance=ExtResource("19_r0iut")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -11.045947, 0.9778495, 0)
 
 [connection signal="body_entered" from="BedroomCameraTrigger" to="." method="entered_bedroom"]
 [connection signal="body_exited" from="BedroomCameraTrigger" to="." method="exited_bedroom"]
@@ -686,5 +699,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.285017, 2.4030075, -13.64
 [connection signal="body_exited" from="Sofa1/InteracaoTV" to="." method="_on_interacao_tv_body_exited"]
 [connection signal="body_entered" from="Banco/InteracaoBanco" to="." method="_on_interacao_banco_body_entered"]
 [connection signal="body_exited" from="Banco/InteracaoBanco" to="." method="_on_interacao_banco_body_exited"]
+[connection signal="body_entered" from="mascara2/InteracaoTrocaCena" to="." method="_on_interacao_troca_cena_body_entered"]
 [connection signal="body_entered" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_entered"]
 [connection signal="body_exited" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_exited"]
