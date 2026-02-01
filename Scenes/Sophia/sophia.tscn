@@ -1,21 +1,106 @@
 [gd_scene format=3 uid="uid://db1dqsavnoda7"]
 
 [ext_resource type="Script" uid="uid://mo7u5ye3oolp" path="res://Scenes/Sophia/sophia.gd" id="1_sovmv"]
-[ext_resource type="Texture2D" uid="uid://ftuxa8xn7pgk" path="res://Assets/m.png" id="2_rsnxq"]
+[ext_resource type="Texture2D" uid="uid://cb15rq2isu7nc" path="res://Assets/animacoes/sophia/sophia - andar - costas.png" id="2_m8460"]
+[ext_resource type="Texture2D" uid="uid://bydu25c56tk3u" path="res://Assets/animacoes/sophia/sophia - andar - frente.png" id="3_xxs0a"]
+[ext_resource type="Texture2D" uid="uid://cfa2eg4ixqq5v" path="res://Assets/animacoes/sophia/sophia - andar - lado.png" id="4_wai64"]
+[ext_resource type="Texture2D" uid="uid://d2n10hrpt43w" path="res://Assets/animacoes/sophia/sophia - idle - costas.png" id="5_q1dmd"]
+[ext_resource type="Texture2D" uid="uid://db7djmyaymynb" path="res://Assets/animacoes/sophia/sophia - idle - frente.png" id="6_08ibl"]
+[ext_resource type="Texture2D" uid="uid://dpoc0fqbriva8" path="res://Assets/animacoes/sophia/sophia - idle - lado.png" id="7_qtb6o"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sovmv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky40c"]
+atlas = ExtResource("2_m8460")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xka2l"]
+atlas = ExtResource("2_m8460")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf7gv"]
+atlas = ExtResource("3_xxs0a")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhsjx"]
+atlas = ExtResource("3_xxs0a")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaqft"]
+atlas = ExtResource("4_wai64")
+region = Rect2(0, 44, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ohh"]
+atlas = ExtResource("4_wai64")
+region = Rect2(0, 132, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtwm0"]
+atlas = ExtResource("5_q1dmd")
+region = Rect2(0, 0, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gik38"]
+atlas = ExtResource("6_08ibl")
+region = Rect2(0, 0, 23, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1dbi"]
+atlas = ExtResource("7_qtb6o")
+region = Rect2(0, 0, 23, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jb7qt"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky40c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xka2l")
+}],
 "loop": true,
-"name": &"default",
+"name": &"andar_costas",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rsnxq")
+"texture": SubResource("AtlasTexture_cf7gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhsjx")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"andar_frente",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yaqft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ohh")
+}],
+"loop": true,
+"name": &"andar_lado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtwm0")
+}],
+"loop": true,
+"name": &"idle_costas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gik38")
+}],
+"loop": true,
+"name": &"idle_frente",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1dbi")
+}],
+"loop": true,
+"name": &"idle_lado",
 "speed": 5.0
 }]
 
@@ -27,13 +112,14 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_sovmv")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=870660202]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1336439116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.679438, 0)
 pixel_size = 0.09
 texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_sovmv")
-animation = &"new_animation"
-autoplay = "new_animation"
+sprite_frames = SubResource("SpriteFrames_jb7qt")
+animation = &"andar_costas"
+autoplay = "idle_frente"
+frame_progress = 0.20361787
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1163706803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05967708, 1.6605868, -0.012311816)
