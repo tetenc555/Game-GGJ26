@@ -22,6 +22,10 @@ InteractionManager="*uid://b22ydtep7r0jo"
 GameController="*uid://kkk30k4aaawb"
 SceneController="*uid://ue8enaw2yia"
 
+[display]
+
+window/subwindows/embed_subwindows=false
+
 [input]
 
 ui_close_dialog={
