@@ -13,6 +13,7 @@ func spawn_natalia(Vector: Vector3):
 	natalia.rotation_degrees.x=-15;
 	natalia.rotation_degrees.y=90
 	get_tree().current_scene.add_child(natalia)
+	return natalia
 
 
 func trocaIDEntrada(idPar: String, body: Node3D) -> void:
@@ -54,8 +55,11 @@ func _ready():
 	await SceneController.fade(0.0)
 	InteractionManager.start_dialog_from_object("DialogoQuartoVerao", posicao_dialogo)
 	await DialogManager.dialog_finished
-	await spawn_natalia(Vector3(-15.019, 0.801, -5.781))
+	var natalia = await spawn_natalia(Vector3(-15.019, 0.801, -5.781))
 	InteractionManager.start_dialog_from_object("DialogoQuartoVerao2", posicao_dialogo)
+	await DialogManager.dialog_finished
+	natalia.queue_free()
+
 	
 	
 
