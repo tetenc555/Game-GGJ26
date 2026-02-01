@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cgjp6n6106qqk" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
 [ext_resource type="PackedScene" uid="uid://d3r8j60kg65dw" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
 [ext_resource type="PackedScene" uid="uid://c5g7lpxb5k88k" path="res://Assets/MicrondA/Microndas.blend" id="15_4tel5"]
+[ext_resource type="PackedScene" uid="uid://dvr7238mhvt4a" path="res://Assets/mascara/mascara1.blend" id="15_61jyq"]
 [ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
@@ -350,7 +351,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." unique_id=1111050496 instance=ExtResource("1_7q7q3")]
-transform = Transform3D(-4.371139e-08, -0.17364818, 0.9848077, 0, 0.9848077, 0.17364818, -1, 7.590403e-09, -4.304731e-08, -15.90328, 1.0624936, -2.0917006)
+transform = Transform3D(-4.371139e-08, -0.17364818, 0.9848077, 0, 0.9848077, 0.17364818, -1, 7.590403e-09, -4.304731e-08, -19.332071, 1.0624936, -0.19549966)
 collision_priority = 2.0
 
 [node name="C-S" type="CSGBox3D" parent="." unique_id=662865334]
@@ -635,6 +636,12 @@ debug_color = Color(0.8750734, 0.00043413937, 0.83804786, 0.41960785)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Banco/InteracaoBanco" unique_id=1627344092]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03875661, 4.593399, -3.196926)
 shape = SubResource("BoxShape3D_lfxlb")
+
+[node name="mascara1" parent="." unique_id=119453555 instance=ExtResource("15_61jyq")]
+transform = Transform3D(-0.35000002, -0.12603976, 0.5929705, 0, 0.68470335, 0.14553818, -0.60621774, 0.072769105, -0.3423517, -21.674578, 2.1311731, 3.0104613)
+
+[node name="mascara2" parent="." unique_id=438935092 instance=ExtResource("15_61jyq")]
+transform = Transform3D(-0.26519305, 0.09851634, -0.400084, -0.0677618, 0.45888206, 0.1579102, 0.4064246, 0.14079, -0.23472793, -4.104665, 2.5887103, 7.1860085)
 
 [node name="Armario de Roupa" parent="." unique_id=499509915 instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)

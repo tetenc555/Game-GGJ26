@@ -64,5 +64,6 @@ func _lock_player(state: bool):
 	if player:
 		player.input_locked = state
 
+
 func _ready():
 	var dialog_box = get_tree().get_first_node_in_group("dialog_box")
