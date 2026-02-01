@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b06qtbqxijld1"]
+[gd_scene load_steps=12 format=3 uid="uid://b06qtbqxijld1"]
 
 [ext_resource type="Script" uid="uid://bwd1sfdabc8e7" path="res://Scenes/BaileVazio/bailevazio.gd" id="1_3wa5f"]
 [ext_resource type="Texture2D" uid="uid://de52n8d4cnccv" path="res://Assets/chaoBaile.png" id="1_in1sx"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://camhwv2i6wgvh" path="res://Assets/janelaBaileVidro.png" id="4_uvd7u"]
 [ext_resource type="PackedScene" uid="uid://dtdc3yft60d2a" path="res://Assets/porta do baile/Porta Baile.blend" id="5_gnjwu"]
 [ext_resource type="PackedScene" uid="uid://d0pwywxd1qast" path="res://Assets/fonte/baile1.blend" id="7_1cae1"]
-[ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="8_hd5go"]
+[ext_resource type="AudioStream" uid="uid://dvp4w33pcv8ph" path="res://sons/Musicas/SomTriste.mp3" id="8_hd5go"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiy6j"]
 albedo_texture = ExtResource("1_in1sx")
@@ -23,119 +23,120 @@ texture_filter = 0
 albedo_texture = ExtResource("4_uvd7u")
 texture_filter = 0
 
-[node name="Node3D" type="Node3D" unique_id=1759705652]
+[node name="Node3D" type="Node3D"]
 script = ExtResource("1_3wa5f")
 
-[node name="Chao" type="CSGBox3D" parent="." unique_id=1599690359]
+[node name="Chao" type="CSGBox3D" parent="."]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0.00830479, -0.131)
 size = Vector3(1, 0.007085937, 1)
 material = SubResource("StandardMaterial3D_uiy6j")
 
-[node name="P-S" type="CSGBox3D" parent="." unique_id=931519479]
+[node name="P-S" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008076668, 3.2601848, 12.319219)
 size = Vector3(24.986076, 6.4263306, 0.13683319)
 material = SubResource("StandardMaterial3D_2qjdu")
 
-[node name="P-N" type="CSGBox3D" parent="." unique_id=338520614]
+[node name="P-N" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008076668, 3.2601848, -12.54472)
 size = Vector3(24.986076, 6.4263306, 0.13683319)
 material = SubResource("StandardMaterial3D_2qjdu")
 
-[node name="P-E" type="CSGBox3D" parent="." unique_id=519468702]
+[node name="P-E" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -12.456381, 3.2601848, -0.1073823)
 size = Vector3(24.986076, 6.4263306, 0.13683319)
 material = SubResource("StandardMaterial3D_2qjdu")
 
-[node name="Janela1Baile2" parent="." unique_id=899546070 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile2" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.411, 1.414, 2.3923934)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile2" unique_id=844750033]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile3" parent="." unique_id=352310034 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile3" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.411, 1.414, -3.0569985)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile3" unique_id=1414341752]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile4" parent="." unique_id=1870869192 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile4" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.411, 1.414, -8.914501)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile4" unique_id=488112179]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile" parent="." unique_id=2077800847 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.410643, 1.4138746, 8.08346)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile" unique_id=1222972399]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile5" parent="." unique_id=1071891056 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile5" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.404705, 1.414, 12.249077)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile5" unique_id=326035816]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile7" parent="." unique_id=1942429391 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile7" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.404705, 1.414, -12.46995)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile7" unique_id=1121872911]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile9" parent="." unique_id=1667581428 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile9" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.7531435, 1.414, -12.46995)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile9" unique_id=76268079]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile10" parent="." unique_id=1660681461 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile10" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.1243773, 1.414, -12.46995)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile10" unique_id=946545307]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile6" parent="." unique_id=1349481207 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile6" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.238827, 1.414, 12.249077)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile6" unique_id=790207869]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Janela1Baile8" parent="." unique_id=234260201 instance=ExtResource("3_1cae1")]
+[node name="Janela1Baile8" parent="." instance=ExtResource("3_1cae1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.239, 1.414, -12.47)
 
-[node name="Vidro" type="CSGBox3D" parent="Janela1Baile8" unique_id=1874351339]
+[node name="Vidro" type="CSGBox3D" parent="Janela1Baile8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031224728, 1.6839073, -0.017202377)
 size = Vector3(0.018554688, 3.0371094, 2.8974)
 material = SubResource("StandardMaterial3D_qjtmg")
 
-[node name="Porta Baile" parent="." unique_id=1629316350 instance=ExtResource("5_gnjwu")]
+[node name="Porta Baile" parent="." instance=ExtResource("5_gnjwu")]
 transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0.4780023, -0.106597185, 11.97438)
 
-[node name="baile1" parent="." unique_id=1296171420 instance=ExtResource("7_1cae1")]
+[node name="baile1" parent="." instance=ExtResource("7_1cae1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.46694565, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=938563692]
+[node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.012217023, -0.57353365, 0.8190909, 0, 0.81915206, 0.57357645, -0.9999254, 0.0070073972, -0.010007599, 32.18351, 27.27245, -0.22252452)
 current = true
 fov = 31.8
 
-[node name="CharacterBody3D" parent="." unique_id=1864016624 instance=ExtResource("8_hd5go")]
-transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.9659258, 0.25881904, -1, 1.131334e-08, -4.222196e-08, 2.0849867, 0, 4.4712777)
+[node name="musicaBaileVazio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_hd5go")
+autoplay = true
