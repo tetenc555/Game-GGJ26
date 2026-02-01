@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b06qtbqxijld1"]
+
+[node name="Node3D" type="Node3D" unique_id=1759705652]
+
+[node name="Chao" type="CSGBox3D" parent="." unique_id=1599690359]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0.00830479, -0.131)
+size = Vector3(1, 0.007085937, 1)
+
+[node name="P-S" type="CSGBox3D" parent="." unique_id=931519479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008076668, 3.2601848, 12.319219)
+size = Vector3(24.986076, 6.4263306, 0.13683319)
+
+[node name="P-N" type="CSGBox3D" parent="." unique_id=338520614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008076668, 3.2601848, -12.54472)
+size = Vector3(24.986076, 6.4263306, 0.13683319)
+
+[node name="P-E" type="CSGBox3D" parent="." unique_id=519468702]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -12.456381, 3.2601848, -0.1073823)
+size = Vector3(24.986076, 6.4263306, 0.13683319)
