@@ -1,4 +1,4 @@
-# A mascara atraves do tempo
+# A mascara através do tempo
 
 ## Participants:
 [Danrley Gonçalves Dias](https://github.com/Danrleygd)
@@ -7,18 +7,18 @@
 
 [Isadu](https://isadu.itch.io/)
 
-Lynn Ventura
+Juniper Ventura
 
 [João Pedro Srbek](https://github.com/Jyrou)
 
 [Rebecca Fiorillo](https://github.com/tetenc555)
 
 ## About the game:
-(This game is in brazilian portuguese so we could achieve the *"Stay Local"* diversifier) - pipipi popopo
+(This game is in brazilian portuguese so we could achieve the *"Stay Local"* diversifier) - This game is about a sapphic relationship and it's conflicts, as we move through our surroundings (and time), changing towards a better, healthier relationship in the future.  
 
 ## Diversifiers we achieved:
 - Crossplatform play -> We used Godot!
-- Stay local -> All of our ambietation and voice lines are informal, revolving around the drama that takes place in Xique Xique - Bahia
+- Stay local -> All of our ambientation and voice lines are informal, revolving around the drama that takes place in Xique Xique - Bahia
 - Diverse -> We have 3 diversifies, including this one!
 
 ## Assets used:
