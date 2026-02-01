@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5f7liekcuf6n" path="res://Assets/Sofa/Sofa.blend" id="7_qko4a"]
 [ext_resource type="PackedScene" uid="uid://51gycbjbsn68" path="res://Assets/Maquina de Roupa/Lava-roupa.blend" id="7_yfhgd"]
 [ext_resource type="PackedScene" uid="uid://btkvw1bvu8ugb" path="res://Assets/Banco/Banco.blend" id="8_qko4a"]
+[ext_resource type="PackedScene" uid="uid://cgjp6n6106qqk" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -79,6 +80,9 @@ size = Vector3(11.852875, 2.4331055, 5.076538)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfhgd"]
 size = Vector3(4.8554535, 5.3606567, 4.725586)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l0lye"]
+size = Vector3(3.3554688, 3.7038574, 3.1401062)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qko4a"]
 size = Vector3(14.83078, 4.831543, 9.09668)
@@ -253,7 +257,7 @@ transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.
 shape = SubResource("BoxShape3D_vvsrn")
 
 [node name="Geladeira" parent="." unique_id=497376229 instance=ExtResource("6_vmc43")]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -10.3256645, 0.5810847, 22.136072)
+transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, -9.865765, 0.5810847, 22.136072)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Geladeira" unique_id=738974082]
 
@@ -263,12 +267,12 @@ shape = SubResource("BoxShape3D_vmc43")
 debug_color = Color(0.785974, 0.2976024, 0.78994936, 0.41960785)
 
 [node name="Sofa" parent="." unique_id=758715556 instance=ExtResource("7_qko4a")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.6726491, 1.304606, -2.9845316)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.1479754, 1.304606, -7.141779)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sofa" unique_id=1196893500]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa/StaticBody3D" unique_id=479164406]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0016241074, 0.28219843, 0.3611927)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0636363, 0.28219843, 0.3611927)
 shape = SubResource("BoxShape3D_3gews")
 debug_color = Color(0.9166872, 7.57578e-05, 0.7101964, 0.41960785)
 
@@ -281,6 +285,16 @@ transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024497986, 2.9236498, 0.12548065)
 shape = SubResource("BoxShape3D_yfhgd")
 debug_color = Color(0.83656895, 0.008710318, 0.93025184, 0.41960785)
+
+[node name="Fogao" parent="." unique_id=578992450 instance=ExtResource("9_qko4a")]
+transform = Transform3D(-0.6, 0, -9.059749e-08, 0, 0.6, 0, 9.059749e-08, 0, -0.6, -6.4141126, 0.8963597, 22.915817)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fogao" unique_id=1343842301]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fogao/StaticBody3D" unique_id=1030284512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4717369, 2.5697541, 0.7279701)
+shape = SubResource("BoxShape3D_l0lye")
+debug_color = Color(0.8874474, 0.0953918, 0.76514703, 0.41960785)
 
 [node name="Banco" parent="." unique_id=690478026 instance=ExtResource("8_qko4a")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.4238937, -4.7683716e-07, 10.715519)
