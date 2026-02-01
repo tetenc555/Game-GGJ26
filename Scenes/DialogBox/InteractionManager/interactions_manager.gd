@@ -5,8 +5,8 @@ var dialogs: Dictionary  = {
 	"mesaTrabalhoVerao": PackedStringArray(["Essa é minha mesa de trabalho, no tempo livre gosto de jogar jogos de fazendinha"]),
 	"camaVerao": PackedStringArray(["A cama já não parece tão vazia, quanto algum tempo atras"]),
 	"janelaVerao": PackedStringArray(["O calor de Xique Xique – Bahia permanece castigante"]),
-	"criadomudoVerao": PackedStringArray(["Há um quadro de Sophia e Natalia sorrindo muito felizes. (Sophia - “Saudade de quando os dias eram mais simples como esse"]),
-	"arnarioVerao": PackedStringArray(["Há algumas roupas antigas de Sophia que não deveriam estar ali"]),
+	"cabeceiraVerao": PackedStringArray(["Há um quadro de Sophia e Natalia sorrindo muito felizes. (Sophia - “Saudade de quando os dias eram mais simples como esse“)"]),
+	"armarioVerao": PackedStringArray(["Há algumas roupas antigas de Sophia que não deveriam estar ali"]),
 	
 	
 	#dialogo1
@@ -42,9 +42,10 @@ var dialogs: Dictionary  = {
 "Natalia - “Bem, espero que já tenha começado a preparar sua mala, a viagem é daqui uma semana.”"
 ]),
 
-#Volta ao presnete
+#Narador 3 leva ao inverno, trigger saindo do quarto, colocar depois do dialogo tambem
 "Narrador3": PackedStringArray([
-"Depois de repassar por todo seu quarto, Sophia volta sua atenção para a máscara, seu brilho permanece e chama sua atenção.",
+"Depois de repassar por todo seu quarto, Sophia volta sua atenção para a máscara, seu brilho permanece e chama sua atenção."]),
+"Narrador3.5": PackedStringArray([
 "Novamente Sophia coloca a máscara e o sentimento de estar voando retorna."]),
 
 "Narrador4": PackedStringArray([
@@ -60,12 +61,18 @@ var dialogs: Dictionary  = {
 "Sophia - “Eu lembro de sentir que Natalia escondia mais, mas não quis prolongar a discussão.”"
 ]),
 
-"SofaInverno": PackedStringArray(["Nesse sofá Sophia e Natalia já viveram vários momentos de aconchego e troca de carinhos. A memória se torna dolorosa."]),
-"GeladeiraInverno": PackedStringArray(["Somente um post it com a letra de Natalia: “LAVE SUA LOUÇA.”"]),
-"PiaInverno": PackedStringArray(["Há uma montanha de louça suja, provavelmente está ali já faz semanas."]),
-"FogaoInverno": PackedStringArray(["Há panelas sobre o fogão e um cheiro podre exalando delas."]),
+"sofaInverno": PackedStringArray(["Nesse sofá Sophia e Natalia já viveram vários momentos de aconchego e troca de carinhos. A memória se torna dolorosa."]),
+"geladeiraInverno": PackedStringArray(["Somente um post it com a letra de Natalia: “LAVE SUA LOUÇA.”"]),
+"piaInverno": PackedStringArray(["Há uma montanha de louça suja, provavelmente está ali já faz semanas."]),
+"fogaoInverno": PackedStringArray(["Há panelas sobre o fogão e um cheiro podre exalando delas."]),
 "TVInverno": PackedStringArray(["Está passando um reality aleatório."]),
-"MascaraChamando": PackedStringArray(["A máscara chama por Sophia."]),
+"mascaraChamando": PackedStringArray(["A máscara chama por Sophia."]),
+"mesaInverno": PackedStringArray(["Na tela é possível ver o jogo “Fazendinha Velha do Vovô” aberto no seu menu de pause. Não é a mesma coisa sem a Natália"]),
+"janelaInverno": PackedStringArray(["O clima parece triste, o céu está nublado e acompanhado de uma leve chuva."]),
+"cabeceiraInverno": PackedStringArray(["O peso dos sorrisos de Sophia e Natalia parece doloroso, um sentimento de que momentos assim não acontecerão mais.  "]),
+"camaInverno": PackedStringArray(["A cama parece tão vazia, como se já não contasse a história de um casal feliz"]),
+"armarioInverno": PackedStringArray(["Aparentemente, agasalhos de frio ganham destaque em seu interior"]),
+
 
 "NarradorBaileVazio": PackedStringArray([
 "Sophia se encontra novamente no salão do baile de máscaras, mas desta vez completamente sozinha."

@@ -69,42 +69,42 @@ func move_camera(pos: Vector3):
 #interactions
 
 func _on_interacao_mesa_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("mesaTrabalhoVerao",body);
+	trocaIDEntrada("mesaInverno",body);
 
 
 func _on_interacao_mesa_body_exited(body: Node3D) -> void:
-	trocaIDSaida("mesaTrabalhoVerao",body);
+	trocaIDSaida("mesaInverno",body);
 
 
 func _on_interacao_cama_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("camaVerao",body)
+	trocaIDEntrada("camaInverno",body)
 
 func _on_interacao_cama_body_exited(body: Node3D) -> void:
-	trocaIDSaida("camaVerao",body);
+	trocaIDSaida("camaInverno",body);
 
 
 func _on_interacao_cabeceira_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("cabeceiraVerao",body)
+	trocaIDEntrada("cabeceiraInverno",body)
 
 
 func _on_interacao_cabeceira_body_exited(body: Node3D) -> void:
-	trocaIDSaida("cabeceiraVerao",body);
+	trocaIDSaida("cabeceiraInverno",body);
 
 
 func _on_interacao_geladeira_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("geladeiraInverno",body)
 
 
 func _on_interacao_geladeira_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("geladeiraInverno",body);
 
 
 func _on_interacao_pia_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("piaInverno",body)
 
 
 func _on_interacao_pia_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("piaInverno",body);
 
 
 func _on_interacao_lava_roupa_body_entered(body: Node3D) -> void:
@@ -116,26 +116,26 @@ func _on_interacao_lava_roupa_body_exited(body: Node3D) -> void:
 
 
 func _on_interacao_fogao_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("fogaoInverno",body)
 
 
 func _on_interacao_fogao_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("fogaoInverno",body);
 
 
 func _on_interacao_sofa_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("sofaInverno",body)
 
 
 func _on_interacao_sofa_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("sofaInverno",body);
 
 func _on_interacao_tv_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("TVInverno",body)
 
 
 func _on_interacao_tv_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("TVInverno",body);
 
 
 func _on_interacao_banco_body_entered(body: Node3D) -> void:
@@ -147,15 +147,8 @@ func _on_interacao_banco_body_exited(body: Node3D) -> void:
 
 
 func _on_interacao_armario_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("armarioVerao",body)
+	trocaIDEntrada("armarioInverno",body)
 
 
 func _on_interacao_armario_body_exited(body: Node3D) -> void:
-	trocaIDSaida("armarioVerao",body);
-
-
-func _on_trigger_narrador_4_body_entered(body: Node3D) -> void:
-	var screen_size = get_viewport().get_visible_rect().size
-	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
-	InteractionManager.start_dialog_from_object("Narrador3", posicao_dialogo)
-	
+	trocaIDSaida("armarioInverno",body);
