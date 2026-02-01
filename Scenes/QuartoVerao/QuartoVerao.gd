@@ -45,7 +45,7 @@ func entered_bedroom(body: Node3D) -> void:
 
 func exited_bedroom(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		move_camera(Vector3(32.05, 27.27, 3.1))
+		move_camera(Vector3(30.81, 27.27, 0.36))
 		fade_in(paredeQuarto)
 
 func fade_out(node: CSGBox3D):
