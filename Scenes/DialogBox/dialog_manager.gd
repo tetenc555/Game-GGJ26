@@ -17,6 +17,7 @@ func start_dialog(position: Vector2, lines: Array[String]):
 		return
 	dialog_lines = lines
 	text_box_position = position
+	_lock_player(true)
 	_show_text_box()
 	is_dialog_active = true
 	if(current_line_index+1 < lines.size()):
@@ -51,12 +52,17 @@ func _unhandled_input(event):
 		text_box = null
 		is_dialog_active = false
 		current_line_index = 0
-		dialog_finished.emit()  
+		dialog_finished.emit()
+		_lock_player(false)
 		return
 
 	_show_text_box()
 
 
+func _lock_player(state: bool):
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.input_locked = state
 
 func _ready():
 	var dialog_box = get_tree().get_first_node_in_group("dialog_box")

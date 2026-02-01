@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="3_oq3mb"]
 [ext_resource type="Texture2D" uid="uid://tvb1t3viww34" path="res://Assets/chaoSala.png" id="3_trdd2"]
 [ext_resource type="Texture2D" uid="uid://dl6x72ygilstk" path="res://Assets/chaoQuarto.png" id="4_4tel5"]
+[ext_resource type="Texture2D" uid="uid://doh5e2nt8r8vb" path="res://Assets/janelaAzulVidro.png" id="5_n3rgw"]
 [ext_resource type="PackedScene" uid="uid://7hft04d4k5f6" path="res://Assets/Cabeceira e Cama/Cabeceira e Cama.blend" id="5_ouqb2"]
 [ext_resource type="PackedScene" uid="uid://doudba0quumuo" path="res://Assets/Geladeira/Geladeira.blend" id="6_vmc43"]
 [ext_resource type="PackedScene" uid="uid://mgddkmxq8lwd" path="res://Assets/Armario de Roupa/Armario de Roupa.blend" id="6_xk6e0"]
@@ -251,6 +252,10 @@ albedo_texture = SubResource("NoiseTexture2D_6d1t3")
 normal_enabled = true
 uv1_triplanar = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61jyq"]
+albedo_texture = ExtResource("5_n3rgw")
+texture_filter = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oq3mb"]
 albedo_color = Color(0.39492178, 0.18668509, 0.026893586, 1)
 
@@ -393,6 +398,11 @@ use_collision = true
 collision_layer = 2
 size = Vector3(0.35675633, 6.4263306, 34.401062)
 material = SubResource("StandardMaterial3D_6wwey")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="P-S-W" unique_id=557977231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09004402, 0.8911786, -14.782867)
+size = Vector3(0.43798828, 2.8793907, 2.556479)
+material = SubResource("StandardMaterial3D_61jyq")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="P-S-W" unique_id=1232342871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29330826, 8.885585)
