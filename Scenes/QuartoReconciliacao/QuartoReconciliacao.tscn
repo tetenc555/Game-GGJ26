@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dl6x72ygilstk" path="res://Assets/chaoQuarto.png" id="4_4tel5"]
 [ext_resource type="Texture2D" uid="uid://doh5e2nt8r8vb" path="res://Assets/janelaAzulVidro.png" id="5_n3rgw"]
 [ext_resource type="PackedScene" uid="uid://7hft04d4k5f6" path="res://Assets/Cabeceira e Cama/Cabeceira e Cama.blend" id="5_ouqb2"]
+[ext_resource type="PackedScene" uid="uid://b42lwa1rgiwpt" path="res://Scenes/Natalia/natalia.tscn" id="5_we5kj"]
 [ext_resource type="PackedScene" uid="uid://doudba0quumuo" path="res://Assets/Geladeira/Geladeira.blend" id="6_vmc43"]
 [ext_resource type="PackedScene" uid="uid://mgddkmxq8lwd" path="res://Assets/Armario de Roupa/Armario de Roupa.blend" id="6_xk6e0"]
 [ext_resource type="PackedScene" uid="uid://51gycbjbsn68" path="res://Assets/Maquina de Roupa/Lava-roupa.blend" id="7_yfhgd"]
@@ -264,6 +265,11 @@ albedo_color = Color(0.39492178, 0.18668509, 0.026893586, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hevjj"]
 size = Vector3(2.1, 5.51, 2.92)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0we8j"]
+transparency = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_we5kj"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_6d1t3"]
 size = Vector3(16.026855, 1, 16.474487)
 
@@ -388,6 +394,9 @@ collision_mask = 3
 size = Vector3(0.068847656, 6.4263306, 34.5616)
 material = SubResource("StandardMaterial3D_qko4a")
 
+[node name="CharacterBody3D2" parent="." unique_id=1572758789 instance=ExtResource("5_we5kj")]
+transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.9659258, 0.25881904, -1, 1.131334e-08, -4.222196e-08, -22.064117, 0, 0.42350483)
+
 [node name="C-B" type="CSGBox3D" parent="." unique_id=1201217795]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.597, 0, 12.239705)
 size = Vector3(9.880615, 1, 12.196922)
@@ -434,6 +443,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38717937, -6.7563696)
 layers = 2
 operation = 2
 size = Vector3(1, 4.791321, 2.444336)
+material = SubResource("StandardMaterial3D_0we8j")
 
 [node name="P-S-S" type="CSGBox3D" parent="." unique_id=1993033002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.464488, 3.2601848, 18.302868)
@@ -450,6 +460,7 @@ size = Vector3(9.876919, 6.4263306, 0.13683319)
 [node name="P-B-N" type="CSGBox3D" parent="." unique_id=532752295]
 transform = Transform3D(1, 0, 0, 0, 0.9999596, -0.008988325, 0, 0.008988325, 0.9999596, -16.589317, 3.2601848, 7.796811)
 size = Vector3(9.886702, 6.4263306, 0.13683319)
+material = SubResource("StandardMaterial3D_we5kj")
 
 [node name="P-B-W" type="CSGBox3D" parent="." unique_id=1527838544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.55717, 3.3013177, 12.032446)

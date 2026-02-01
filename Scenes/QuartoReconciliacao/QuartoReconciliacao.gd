@@ -45,6 +45,7 @@ func _on_dialog_finished():
 
 func _ready():
 	DialogManager.dialog_finished.connect(_on_dialog_finished)
+	paredeQuarto=$"P-S-W"
 
 	
 
