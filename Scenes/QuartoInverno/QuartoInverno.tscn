@@ -339,19 +339,7 @@ size = Vector3(1.496582, 8.495728, 5.0164795)
 [sub_resource type="BoxShape3D" id="BoxShape3D_hngxe"]
 size = Vector3(0.44885254, 0.76474, 0.9180603)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_thtj5"]
-size = Vector3(6.18, 17.815, 2.185)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rj2vf"]
-size = Vector3(7.89, 10.605, 5.795)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kqisk"]
-size = Vector3(1, 4.355, 3.375)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hrhuf"]
-size = Vector3(2.535, 5.49, 3.59)
-
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=1740440265]
 script = ExtResource("1_ssgdo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

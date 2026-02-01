@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhl42lu8mpu0d"
-path="res://.godot/imported/Janela1Baile.blend-2d976a07d670facea5822bd104156bd2.scn"
+path="res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"
 
 [deps]
 
-source_file="res://Assets/janela1/Janela1Baile.blend"
-dest_files=["res://.godot/imported/Janela1Baile.blend-2d976a07d670facea5822bd104156bd2.scn"]
+source_file="res://Assets/janelaBaile/Janela1Baile.blend"
+dest_files=["res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"]
 
 [params]
 

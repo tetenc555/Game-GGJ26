@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwyk5t1pv3p6d"
-path.s3tc="res://.godot/imported/Cube Base Color.png-973137767fdebb1932bc78918cea6b9d.s3tc.ctex"
+uid="uid://camhwv2i6wgvh"
+path.s3tc="res://.godot/imported/janelaBaileVidro.png-b6a65b1e8d263989131a2fcd94119c66.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/janela1/Cube Base Color.png"
-dest_files=["res://.godot/imported/Cube Base Color.png-973137767fdebb1932bc78918cea6b9d.s3tc.ctex"]
+source_file="res://Assets/janelaBaileVidro.png"
+dest_files=["res://.godot/imported/janelaBaileVidro.png-b6a65b1e8d263989131a2fcd94119c66.s3tc.ctex"]
 
 [params]
 
