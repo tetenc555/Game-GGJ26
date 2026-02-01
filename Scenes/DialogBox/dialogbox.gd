@@ -14,7 +14,7 @@ var is_typing := false
 var letter_time := 0.03
 var space_time := 0.01
 var punctuation_time := 0.08
-
+var input_locked:= false
 
 func _ready():
 	timer.timeout.connect(_on_timer_timeout)
@@ -33,7 +33,7 @@ func display_text(t: String):
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	_display_letter()
 
-#pra comitar
+
 func _display_letter():
 	if letter_index >= text.length():
 		is_typing = false

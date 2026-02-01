@@ -31,6 +31,7 @@ var dialogs: Dictionary  = {
 "Sophia se deita cansada na cama do casal, agora mais vazia que o normal.",
 "Ela pensa sobre os acontecimentos, tentando entender tudo o que aconteceu, mas algo chama sua atenção, sua máscara do baile está brilhando.",
 "Ao se aproximar e pegar a máscara em suas mãos um sentimento surge, é como se a máscara a chamasse..."]),
+
 "PegaMascara1": PackedStringArray([
 "Sophia aproxima a máscara de seu rosto e a encaixa.",
 "Uma luz intensa toma conta de seus olhos, Sophia sente por um breve momento a sensação de estar voando e no instante seguinte se vê novamente em seu quarto, mas algo não parece certo."

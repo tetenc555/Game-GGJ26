@@ -40,7 +40,10 @@ func _ready():
 	var screen_size = get_viewport().get_visible_rect().size
 	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
 	InteractionManager.start_dialog_from_object("DialogoQuarto1", posicao_dialogo)
-	
+	await DialogManager.dialog_finished
+	await SceneController.fade(1.0)
+	$mascara1.queue_free()
+	await SceneController.fade(0.0)
 	
 
 func entered_bedroom(body: Node3D) -> void:
@@ -164,3 +167,8 @@ func _on_trigger_narrador_4_body_entered(body: Node3D) -> void:
 	var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
 	InteractionManager.start_dialog_from_object("Narrador3", posicao_dialogo)
 	
+
+
+func _on_interacao_troca_cena_body_entered(body: Node3D) -> void:
+	if(body.is_in_group("player")):
+		SceneController.change_scene("res://Scenes/QuartoInverno/QuartoInverno.tscn")
