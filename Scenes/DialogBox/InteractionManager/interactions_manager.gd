@@ -18,8 +18,7 @@ var dialogs: Dictionary  = {
 	"banheiroGeral": PackedStringArray(["Não preciso ir no banheiro agora."]),
 	
 	#dialogo1
-	"Narrador1": PackedStringArray([" Em um salão isolado do mundo urbano, nossa protagonista se encontra em um baile de máscaras, junto com sua amada (talvez, nem tão amada... Só o futuro e atitudes de nossa protagonista dirão o curso que sua história terá).","Este baile de máscaras é uma tradição da alta sociedade brasileira, o evento ocorre em uma cúpula isolada do mundo, no coração da floresta amazônica. Nossa protagonista e sua companheira parecem estar tendo uma conversa um tanto, quanto acalorada... "]),
-	"Dialogo1": PackedStringArray(["Sophia - “QUAL O SEU PROBLEMA NATALIA???” ","Natalia - “MEU PROBLEMA?? MEU PROBLEMA??” ","Natalia - “Meu problema é você!” ","Natalia - “Você nunca está errada, não é? Sempre sou eu o problema, você não consegue enxergar meio metro além dessa sua visão presunçosa e deturpada.” ","Sophia - “Como assim?? Eu não fiz nada!” ","Natalia - “ESSE é o seu problema, você nunca faz nada, nunca se importa, nunca interage, nunca se preocupa e nunca é a culpada!” ","Natalia se afasta de Sophia deixando-a falando sozinha e ainda sem compreender onde errou"]),
+	"Narrador1": PackedStringArray([" Em um salão isolado do mundo urbano, nossa protagonista se encontra em um baile de máscaras, junto com sua amada (talvez, nem tão amada... Só o futuro e atitudes de nossa protagonista dirão o curso que sua história terá).","Este baile de máscaras é uma tradição da alta sociedade brasileira, o evento ocorre em uma cúpula isolada do mundo, no coração da floresta amazônica. Nossa protagonista e sua companheira parecem estar tendo uma conversa um tanto, quanto acalorada... ","Sophia - “QUAL O SEU PROBLEMA NATALIA???” ","Natalia - “MEU PROBLEMA?? MEU PROBLEMA??” ","Natalia - “Meu problema é você!” ","Natalia - “Você nunca está errada, não é? Sempre sou eu o problema, você não consegue enxergar meio metro além dessa sua visão presunçosa e deturpada.” ","Sophia - “Como assim?? Eu não fiz nada!” ","Natalia - “ESSE é o seu problema, você nunca faz nada, nunca se importa, nunca interage, nunca se preocupa e nunca é a culpada!” ","Natalia se afasta de Sophia deixando-a falando sozinha e ainda sem compreender onde errou"]),
 	#skip indo pra casa (tela preta)
 	"Narrador2": PackedStringArray(["Sophia chateada e com seus sentimentos a flor da pele decide deixar o baile e retornar para sua casa. Ao retornar, Natalia só manda uma curta mensagem que diz: “Não me espere, vou ficar na casa da minha mãe, preciso de um tempo para pensar sobre a gente.” "]),
 	
@@ -85,28 +84,21 @@ var dialogs: Dictionary  = {
 
 "NarradorBaileVazio": PackedStringArray([
 "Sophia se encontra novamente no salão do baile de máscaras, mas desta vez completamente sozinha."
-]),
-
-"CelularBug": PackedStringArray([
-"Celular vibra: notificação “sincronização de horário completa: data 99/-15/7777”"
-]),
-
-"DialogoBaileVazio": PackedStringArray([
-"Sophia - “Será que eu sou o problema?”",
+,"Celular vibra: notificação “sincronização de horário completa: data 99/-15/7777”"
+,"Sophia - “Será que eu sou o problema?”",
 "Sophia - “Será que eu só machuco as pessoas que me amam?”",
 "Sophia - “Não consigo ser sociável, muitas interações me sobrecarregam.”",
 "Sophia - “Não escolhi ser assim, eu sou.”",
 "Sophia - “Agora eu vejo, mas acho que é tarde demais para esse entendimento.”",
-"Sophia - “Eu só não percebo que estou machucando as pessoas.”"
-]),
+"Sophia - “Eu só não percebo que estou machucando as pessoas.”",
+"Sophia tira a mascára...",]),
 
+"drama": PackedStringArray(["Celular vibra: notificação “sincronização de horário completa: data 01/02/2026.”"
+]),
+#ARRUMARDAQUI PRA BAIXO
 "NarradorFinal1": PackedStringArray([
-"Celular vibra: notificação “sincronização de horário completa: data 01/02/2026.”"
-,"Sophia percebe que está de volta em casa e no momento certo."
-]),
-
-"DialogoFinalConversa": PackedStringArray([
-"Sophia - “Sinceramente... Acho que a pergunta certa seria, quando eu estava.”",
+"Sophia percebe que está de volta em casa e no momento certo."
+,"Sophia - “Sinceramente... Acho que a pergunta certa seria, quando eu estava.”",
 "Sophia - “Gostaria de conversar... Se você quiser.”",
 "Sophia - “Eu entendi que acabei te machucando várias vezes, sem perceber.”",
 "Sophia - “Eu não gosto de muitas pessoas, me sinto sobrecarregada sensorialmente.”",
@@ -116,11 +108,8 @@ var dialogs: Dictionary  = {
 "Natalia - “Eu nunca soube... só achei que você não se importava.”",
 "Natalia - “Eu também errei por não tentar te entender.”",
 "Natalia - “Eu te amo e quero ser seu porto seguro.”"
-]),
-
-"Encerramento": PackedStringArray([
-"Sophia - “Eu te amo infinitamente.”",
-"Narrador – Máscaras são bonitas, mas não foram feitas para esconder o seu verdadeiro eu."
+,"Sophia - “Eu te amo infinitamente.”",
+"Máscaras são bonitas, mas não foram feitas para esconder o seu verdadeiro eu."
 ])
 }
 

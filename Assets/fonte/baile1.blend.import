@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhl42lu8mpu0d"
-path="res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"
+uid="uid://d0pwywxd1qast"
+path="res://.godot/imported/baile1.blend-6853c061369b12c5d5639c99ea7394e5.scn"
 
 [deps]
 
-source_file="res://Assets/janelaBaile/Janela1Baile.blend"
-dest_files=["res://.godot/imported/Janela1Baile.blend-866af4b330be6502412feccee3a574da.scn"]
+source_file="res://Assets/fonte/baile1.blend"
+dest_files=["res://.godot/imported/baile1.blend-6853c061369b12c5d5639c99ea7394e5.scn"]
 
 [params]
 

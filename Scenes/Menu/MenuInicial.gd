@@ -10,7 +10,7 @@ func _ready() -> void:
 
 #Menu inicial
 func _on_start_pressed() -> void:
-	SceneController.change_scene("res://Scenes/QuartoVerao/QuartoVerao.tscn")
+	SceneController.change_scene("res://Scenes/Baile/baile.tscn")
 
 func _on_options_pressed() -> void:
 	opcoes.visible = true
