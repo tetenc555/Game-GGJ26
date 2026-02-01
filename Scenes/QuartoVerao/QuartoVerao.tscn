@@ -31,6 +31,11 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ouqb2"]
 albedo_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qko4a"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 1, 1, 0.23137255)
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_33f23"]
 noise_type = 5
 frequency = 0.1635
@@ -127,8 +132,16 @@ size = Vector3(9.880615, 1, 12.884079)
 
 [node name="P-S-E" type="CSGBox3D" parent="." unique_id=999183506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.210637, 3.212112, 3.846405)
-visible = false
 size = Vector3(0.068847656, 6.4263306, 39.964233)
+material = SubResource("StandardMaterial3D_qko4a")
+
+[node name="P-S-N" type="CSGBox3D" parent="." unique_id=14124546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, -16.163532)
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(20.76242, 6.4263306, 0.13683319)
+material = SubResource("StandardMaterial3D_6wwey")
 
 [node name="P-S-W" type="CSGBox3D" parent="." unique_id=1479889664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.531374, 3.2601848, 3.788147)
@@ -149,19 +162,13 @@ layers = 2
 operation = 2
 size = Vector3(1, 4.791321, 2.444336)
 
-[node name="P-S-N" type="CSGBox3D" parent="." unique_id=14124546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, -16.163532)
-use_collision = true
-collision_layer = 2
-collision_mask = 3
-size = Vector3(20.76242, 6.4263306, 0.13683319)
-
 [node name="P-S-S" type="CSGBox3D" parent="." unique_id=245977431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2519712, 3.2601848, 23.727097)
 use_collision = true
 collision_layer = 2
 collision_mask = 3
 size = Vector3(20.76242, 6.4263306, 0.13683319)
+material = SubResource("StandardMaterial3D_6wwey")
 
 [node name="P-B-S" type="CSGBox3D" parent="." unique_id=226946826]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.59421, 3.2601848, 20.76507)
@@ -228,7 +235,7 @@ transform = Transform3D(1, 0, -1.897149e-12, 0, 1, 0, 1.897149e-12, 0, 1, 0.1329
 shape = SubResource("BoxShape3D_y6655")
 debug_color = Color(0.8783138, 0.17540574, 0.72064227, 0.41960785)
 
-[node name="Cabeceira e Cama" parent="." unique_id=1824674896 instance=ExtResource("5_ouqb2")]
+[node name="Cabeceira e Cama" parent="." unique_id=663205422 instance=ExtResource("5_ouqb2")]
 transform = Transform3D(-0.6, 0, -5.2453668e-08, 0, 0.6, 0, 5.2453668e-08, 0, -0.6, -25.221365, 0, 3.3930788)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cabeceira e Cama" unique_id=630754630]
@@ -247,7 +254,7 @@ shape = SubResource("BoxShape3D_yvk0o")
 transform = Transform3D(0.99999976, 0, -1.4566126e-12, 0, 0.99999976, 0, 1.4566126e-12, 0, 0.99999976, -2.226921, 0, 2.6968985)
 shape = SubResource("BoxShape3D_dtxsi")
 
-[node name="Abajur" parent="." unique_id=1846053221 instance=ExtResource("3_6wwey")]
+[node name="Abajur" parent="." unique_id=373462257 instance=ExtResource("3_6wwey")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -25.355255, 0.3509965, -8.661339)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Abajur" unique_id=1500543403]
@@ -256,7 +263,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -25.355255, 0.3509965, 
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.11331558, 3.2538753, -0.04766941)
 shape = SubResource("BoxShape3D_vvsrn")
 
-[node name="Geladeira" parent="." unique_id=497376229 instance=ExtResource("6_vmc43")]
+[node name="Geladeira" parent="." unique_id=1036362502 instance=ExtResource("6_vmc43")]
 transform = Transform3D(-0.7, 0, -1.0569706e-07, 0, 0.7, 0, 1.0569706e-07, 0, -0.7, -9.865765, 0.5810847, 22.136072)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Geladeira" unique_id=738974082]
@@ -276,7 +283,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0636363, 0.28219843, 0.3611
 shape = SubResource("BoxShape3D_3gews")
 debug_color = Color(0.9166872, 7.57578e-05, 0.7101964, 0.41960785)
 
-[node name="Lava-roupa" parent="." unique_id=13327986 instance=ExtResource("7_yfhgd")]
+[node name="Lava-roupa" parent="." unique_id=2074432488 instance=ExtResource("7_yfhgd")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 7.641161, 0.4745133, 22.46992)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Lava-roupa" unique_id=1934904691]
@@ -306,7 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20203662, 3.5103252, -3.46
 shape = SubResource("BoxShape3D_qko4a")
 debug_color = Color(0.8750734, 0.00043413937, 0.83804786, 0.41960785)
 
-[node name="Armario de Roupa" parent="." unique_id=883373775 instance=ExtResource("6_xk6e0")]
+[node name="Armario de Roupa" parent="." unique_id=499509915 instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Armario de Roupa" unique_id=675672293]
