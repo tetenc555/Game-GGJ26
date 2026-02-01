@@ -5,7 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://ddpb7muitv5sm" path="res://Assets/Abajur/Abajur.blend" id="3_6wwey"]
 [ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="3_oq3mb"]
 [ext_resource type="PackedScene" uid="uid://7hft04d4k5f6" path="res://Assets/Cabeceira e Cama/Cabeceira e Cama.blend" id="5_ouqb2"]
+[ext_resource type="PackedScene" uid="uid://doudba0quumuo" path="res://Assets/Geladeira/Geladeira.blend" id="6_vmc43"]
 [ext_resource type="PackedScene" uid="uid://mgddkmxq8lwd" path="res://Assets/Armario de Roupa/Armario de Roupa.blend" id="6_xk6e0"]
+[ext_resource type="PackedScene" uid="uid://b5f7liekcuf6n" path="res://Assets/Sofa/Sofa.blend" id="7_qko4a"]
+[ext_resource type="PackedScene" uid="uid://51gycbjbsn68" path="res://Assets/Maquina de Roupa/Lava-roupa.blend" id="7_yfhgd"]
+[ext_resource type="PackedScene" uid="uid://btkvw1bvu8ugb" path="res://Assets/Banco/Banco.blend" id="8_qko4a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -67,6 +71,18 @@ size = Vector3(14.453857, 10, 12.448975)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vvsrn"]
 size = Vector3(1.3172989, 7.5077515, 1.3470459)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmc43"]
+size = Vector3(4.651367, 7.5022583, 3.3577576)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gews"]
+size = Vector3(11.852875, 2.4331055, 5.076538)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfhgd"]
+size = Vector3(4.8554535, 5.3606567, 4.725586)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qko4a"]
+size = Vector3(14.83078, 4.831543, 9.09668)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7ql7"]
 size = Vector3(1.496582, 8.495728, 5.0164795)
 
@@ -77,9 +93,9 @@ script = ExtResource("1_6d1t3")
 environment = SubResource("Environment_6wwey")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=675466456]
-transform = Transform3D(-0.012217023, -0.57353365, 0.8190909, 0, 0.81915206, 0.57357645, -0.9999254, 0.0070073972, -0.010007599, 32.056442, 27.27245, 3.1660748)
+transform = Transform3D(-0.012217023, -0.57353365, 0.8190909, 0, 0.81915206, 0.57357645, -0.9999254, 0.0070073972, -0.010007599, 35.774788, 27.27245, 3.1660748)
 current = true
-fov = 29.3
+fov = 36.8
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1695156520]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -112,14 +128,14 @@ size = Vector3(0.068847656, 6.4263306, 39.964233)
 
 [node name="P-S-W" type="CSGBox3D" parent="." unique_id=1479889664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.531374, 3.2601848, 3.788147)
-sorting_offset = -1.0
+sorting_offset = -3.0
 use_collision = true
 collision_layer = 2
 size = Vector3(0.35675633, 6.4263306, 39.964233)
 material = SubResource("StandardMaterial3D_6wwey")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="P-S-W" unique_id=1232342871]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29330826, 10.898826)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29330826, 7.9878035)
 size = Vector3(1, 4.791, 2.3297548)
 material = SubResource("StandardMaterial3D_oq3mb")
 
@@ -235,6 +251,46 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -25.355255, 0.3509965, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Abajur/StaticBody3D" unique_id=1402768359]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.11331558, 3.2538753, -0.04766941)
 shape = SubResource("BoxShape3D_vvsrn")
+
+[node name="Geladeira" parent="." unique_id=497376229 instance=ExtResource("6_vmc43")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -10.3256645, 0.5810847, 22.136072)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Geladeira" unique_id=738974082]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geladeira/StaticBody3D" unique_id=394550767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26322556, 3.2511292, -0.30555725)
+shape = SubResource("BoxShape3D_vmc43")
+debug_color = Color(0.785974, 0.2976024, 0.78994936, 0.41960785)
+
+[node name="Sofa" parent="." unique_id=758715556 instance=ExtResource("7_qko4a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.6726491, 1.304606, -2.9845316)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sofa" unique_id=1196893500]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa/StaticBody3D" unique_id=479164406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0016241074, 0.28219843, 0.3611927)
+shape = SubResource("BoxShape3D_3gews")
+debug_color = Color(0.9166872, 7.57578e-05, 0.7101964, 0.41960785)
+
+[node name="Lava-roupa" parent="." unique_id=13327986 instance=ExtResource("7_yfhgd")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 7.641161, 0.4745133, 22.46992)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lava-roupa" unique_id=1934904691]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lava-roupa/StaticBody3D" unique_id=1104392343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024497986, 2.9236498, 0.12548065)
+shape = SubResource("BoxShape3D_yfhgd")
+debug_color = Color(0.83656895, 0.008710318, 0.93025184, 0.41960785)
+
+[node name="Banco" parent="." unique_id=690478026 instance=ExtResource("8_qko4a")]
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.4238937, -4.7683716e-07, 10.715519)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Banco" unique_id=83565636]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Banco/StaticBody3D" unique_id=335457187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20203662, 3.5103252, -3.4619064)
+shape = SubResource("BoxShape3D_qko4a")
+debug_color = Color(0.8750734, 0.00043413937, 0.83804786, 0.41960785)
 
 [node name="Armario de Roupa" parent="." unique_id=883373775 instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)
