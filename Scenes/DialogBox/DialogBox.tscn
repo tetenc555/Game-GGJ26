@@ -6,6 +6,7 @@
 [node name="MarginContainer" type="MarginContainer" unique_id=1248785506]
 offset_right = 70.0
 offset_bottom = 69.0
+size_flags_vertical = 0
 script = ExtResource("1_efy2g")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=934189588]
@@ -16,18 +17,20 @@ texture = ExtResource("2_efy2g")
 region_rect = Rect2(4.1058874, 3.1350813, 8.737258, 9.361348)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1076044888]
+custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1403858389]
+[node name="RichLabel" type="RichTextLabel" parent="MarginContainer" unique_id=109673038]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.080783345, 0.080783345, 0.080783345, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.8352941)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-vertical_alignment = 1
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.8352941)
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
 
 [node name="LetterDisplayTimer" type="Timer" parent="." unique_id=742078548]
 
