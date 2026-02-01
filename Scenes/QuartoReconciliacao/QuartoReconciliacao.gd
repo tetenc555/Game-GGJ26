@@ -44,13 +44,15 @@ func _on_dialog_finished():
 
 
 func _ready():
-	pass
+	DialogManager.dialog_finished.connect(_on_dialog_finished)
+
 	
 
 func entered_bedroom(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		move_camera(Vector3(12.28, 24.00, -2.76))
 		fade_out(paredeQuarto)
+	
 
 func exited_bedroom(body: Node3D) -> void:
 	if body.is_in_group("player"):
@@ -176,12 +178,12 @@ func _on_interacao_banheiro_body_entered(body):
 
 func _on_interacao_banheiro_body_exited(body):
 	trocaIDSaida("banheiroGeral",body);
-	
-	
-func _on_interacao_troca_cena_body_entered(body: Node3D) -> void:
-	if(body.is_in_group("player")):
+
+
+func _on_conversa_body_entered(body: Node3D) -> void:
+	if (body.is_in_group("player")):
 		var screen_size = get_viewport().get_visible_rect().size
 		var posicao_dialogo = Vector2(screen_size.x - 1100, screen_size.y - 100)
-		InteractionManager.start_dialog_from_object("Narrador3", posicao_dialogo)
+		InteractionManager.start_dialog_from_object("NarradorFinal1", posicao_dialogo)
 		await DialogManager.dialog_finished
-		SceneController.change_scene("res://Scenes/QuartoInverno/QuartoInverno.tscn")
+		SceneController.change_scene("res://Scenes/Menu/MenuInicial.tscn")

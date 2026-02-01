@@ -328,9 +328,6 @@ size = Vector3(14.83078, 4.831543, 9.09668)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lfxlb"]
 size = Vector3(23.648804, 7.7231445, 12.940643)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_n0bmq"]
-size = Vector3(4.1047363, 5.7632446, 10.140106)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7ql7"]
 size = Vector3(1.496582, 8.495728, 5.0164795)
 
@@ -349,6 +346,9 @@ size = Vector3(6.18, 17.815, 2.185)
 [sub_resource type="BoxShape3D" id="BoxShape3D_e4h06"]
 size = Vector3(7.89, 10.605, 5.795)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0we8j"]
+size = Vector3(13.178589, 5, 13.732422)
+
 [node name="Node3D" type="Node3D" unique_id=273661024]
 script = ExtResource("1_0we8j")
 
@@ -366,7 +366,7 @@ light_color = Color(1, 0.7058824, 0.54509807, 1)
 shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." unique_id=1644165106 instance=ExtResource("1_7q7q3")]
-transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.9659258, 0.25881904, -1, 1.131334e-08, -4.222196e-08, -4.296955, 0.9263277, 2.8650608)
+transform = Transform3D(-4.371139e-08, -0.25881904, 0.9659258, 0, 0.9659258, 0.25881904, -1, 1.131334e-08, -4.222196e-08, -7.8696384, 0.9263277, -5.081093)
 
 [node name="C-S" type="CSGBox3D" parent="." unique_id=1817295403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4747872, 9.536743e-07, 1.1290855)
@@ -656,16 +656,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03875661, 4.593399, -3.196
 shape = SubResource("BoxShape3D_lfxlb")
 
 [node name="mascara1" parent="." unique_id=409942336 instance=ExtResource("15_61jyq")]
-transform = Transform3D(-0.35000002, -0.12603976, 0.5929705, 0, 0.68470335, 0.14553818, -0.60621774, 0.072769105, -0.3423517, -21.674578, 2.1311731, 3.0104613)
-
-[node name="mascara2" parent="." unique_id=1114914356 instance=ExtResource("15_61jyq")]
-transform = Transform3D(-0.26519305, 0.09851634, -0.400084, -0.0677618, 0.45888206, 0.1579102, 0.4064246, 0.14079, -0.23472793, -4.104665, 2.5887103, 7.1860085)
-
-[node name="InteracaoTrocaCena" type="Area3D" parent="mascara2" unique_id=2099098]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mascara2/InteracaoTrocaCena" unique_id=987139172]
-transform = Transform3D(1, 2.9802322e-08, -5.9604645e-08, -2.8312206e-07, 1, -8.940697e-08, 0, 4.4703484e-08, 0.99999994, 0.33386326, -1.4205627, -0.9197173)
-shape = SubResource("BoxShape3D_n0bmq")
+transform = Transform3D(-0.35000002, -0.12603976, 0.5929705, 0, 0.68470335, 0.14553818, -0.60621774, 0.072769105, -0.3423517, -8.685473, 0.69742775, -6.311781)
 
 [node name="Armario de Roupa" parent="." unique_id=1906715955 instance=ExtResource("6_xk6e0")]
 transform = Transform3D(-3.278354e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.278354e-08, -16.400652, 0, -9.417891)
@@ -718,6 +709,14 @@ shape = SubResource("BoxShape3D_43vj6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.342803, 0)
 shape = SubResource("BoxShape3D_e4h06")
 
+[node name="CONVERSA" type="Area3D" parent="." unique_id=500697984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.024003, 5.031365, -2.324289)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CONVERSA" unique_id=1661590349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6235914, -2.589919, 0.73992157)
+shape = SubResource("BoxShape3D_0we8j")
+debug_color = Color(0.946696, 4.813075e-06, 0.5889033, 0.41960785)
+
 [connection signal="body_entered" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_entered"]
 [connection signal="body_exited" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_exited"]
 [connection signal="body_entered" from="BedroomCameraTrigger" to="." method="entered_bedroom"]
@@ -742,10 +741,10 @@ shape = SubResource("BoxShape3D_e4h06")
 [connection signal="body_exited" from="Sofa1/InteracaoTV" to="." method="_on_interacao_tv_body_exited"]
 [connection signal="body_entered" from="Banco/InteracaoBanco" to="." method="_on_interacao_banco_body_entered"]
 [connection signal="body_exited" from="Banco/InteracaoBanco" to="." method="_on_interacao_banco_body_exited"]
-[connection signal="body_entered" from="mascara2/InteracaoTrocaCena" to="." method="_on_interacao_troca_cena_body_entered"]
 [connection signal="body_entered" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_entered"]
 [connection signal="body_exited" from="Armario de Roupa/InteracaoArmario" to="." method="_on_interacao_armario_body_exited"]
 [connection signal="body_entered" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_entered"]
 [connection signal="body_exited" from="Janela/InteracaoJanela" to="." method="_on_interacao_janela_body_exited"]
 [connection signal="body_entered" from="Estante/InteracaoEstante" to="." method="_on_interacao_estante_body_entered"]
 [connection signal="body_exited" from="Estante/InteracaoEstante" to="." method="_on_interacao_estante_body_exited"]
+[connection signal="body_entered" from="CONVERSA" to="." method="_on_conversa_body_entered"]
