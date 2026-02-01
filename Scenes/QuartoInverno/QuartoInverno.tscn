@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bx6yvht4jvpnq"]
 
 [ext_resource type="Script" uid="uid://dxykpey1x5wpf" path="res://Scenes/QuartoInverno/QuartoInverno.gd" id="1_5ffse"]
-[ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Personagem/Personagem.tscn" id="2_m20nh"]
+[ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="2_m20nh"]
 [ext_resource type="Texture2D" uid="uid://tvb1t3viww34" path="res://Assets/chaoSala.png" id="3_encgi"]
 [ext_resource type="Texture2D" uid="uid://dl6x72ygilstk" path="res://Assets/chaoQuarto.png" id="4_hbb8q"]
 [ext_resource type="PackedScene" uid="uid://dmxe1vqjq832j" path="res://Assets/Cadeira Gamer/Cadeira Gamer colorido.glb" id="5_lf6c1"]

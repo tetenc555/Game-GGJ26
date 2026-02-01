@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://db1dqsavnoda7"]
+[gd_scene format=3 uid="uid://b42lwa1rgiwpt"]
 
-[ext_resource type="Script" uid="uid://mo7u5ye3oolp" path="res://Scenes/Personagem/personagem.gd" id="1_sovmv"]
-[ext_resource type="Texture2D" uid="uid://ftuxa8xn7pgk" path="res://Assets/m.png" id="2_rsnxq"]
+[ext_resource type="Script" uid="uid://bfh6fa2u44115" path="res://Scenes/Natalia/natalia.gd" id="1_mgsjn"]
+[ext_resource type="Texture2D" uid="uid://ftuxa8xn7pgk" path="res://Assets/m.png" id="2_y7g5m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sovmv"]
 animations = [{
@@ -12,7 +12,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rsnxq")
+"texture": ExtResource("2_y7g5m")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -25,7 +25,7 @@ size = Vector3(1.6995535, 3.3120499, 0.48701668)
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1111050496]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_sovmv")
+script = ExtResource("1_mgsjn")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=870660202]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.679438, 0)

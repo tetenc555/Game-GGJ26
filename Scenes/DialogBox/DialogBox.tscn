@@ -14,7 +14,7 @@ texture_filter = 1
 texture_repeat = 2
 layout_mode = 2
 texture = ExtResource("2_efy2g")
-region_rect = Rect2(4.1058874, 3.1350813, 8.737258, 9.361348)
+region_rect = Rect2(2, 2, 20, 20)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1076044888]
 custom_minimum_size = Vector2(512, 0)
@@ -27,7 +27,7 @@ theme_override_constants/margin_bottom = 10
 [node name="RichLabel" type="RichTextLabel" parent="MarginContainer" unique_id=109673038]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.8352941)
+theme_override_colors/font_shadow_color = Color(0.021434637, 0.021434635, 0.021434633, 0.8352941)
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
