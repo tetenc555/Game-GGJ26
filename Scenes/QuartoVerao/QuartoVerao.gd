@@ -100,58 +100,58 @@ func _on_interacao_cabeceira_body_exited(body: Node3D) -> void:
 
 
 func _on_interacao_geladeira_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("geladeiraVerao",body)
 
 
 func _on_interacao_geladeira_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("geladeiraVerao",body);
 
 
 func _on_interacao_pia_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("piaVerao",body)
 
 
 func _on_interacao_pia_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("piaVerao",body);
 
 
 func _on_interacao_lava_roupa_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("lavaRoupaVerao",body)
 
 
 func _on_interacao_lava_roupa_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("lavaRoupaVerao",body);
 
 
 func _on_interacao_fogao_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("fogaoVerao",body)
 
 
 func _on_interacao_fogao_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("fogaoVerao",body);
 
 
 func _on_interacao_sofa_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("sofaVerao",body)
 
 
 func _on_interacao_sofa_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("sofaVerao",body);
 
 func _on_interacao_tv_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("TVVerao",body)
 
 
 func _on_interacao_tv_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("TVVerao",body);
 
 
 func _on_interacao_banco_body_entered(body: Node3D) -> void:
-	trocaIDEntrada("",body)
+	trocaIDEntrada("bancoVerao",body)
 
 
 func _on_interacao_banco_body_exited(body: Node3D) -> void:
-	trocaIDSaida("",body);
+	trocaIDSaida("bancoVerao",body);
 
 
 func _on_interacao_armario_body_entered(body: Node3D) -> void:

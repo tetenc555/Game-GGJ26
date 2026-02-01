@@ -12,19 +12,21 @@ config_version=5
 
 config/name="ggj26"
 run/main_scene="uid://b2jk11veho2ly"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-DialogManager="*uid://c7dxodymsa3vx"
-InteractionManager="*uid://b22ydtep7r0jo"
-GameController="*uid://kkk30k4aaawb"
-SceneController="*uid://ue8enaw2yia"
+DialogManager="*res://Scenes/DialogBox/DialogManager.tscn"
+InteractionManager="*res://Scenes/DialogBox/InteractionManager/InteractionManager.tscn"
+GameController="*res://Controllers/GameController/GameController.tscn"
+SceneController="*res://Controllers/SceneController/SceneController.tscn"
 
 [display]
 
+window/size/mode=3
 window/subwindows/embed_subwindows=false
+window/stretch/mode="canvas_items"
 
 [input]
 
