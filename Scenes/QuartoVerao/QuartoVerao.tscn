@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://btkvw1bvu8ugb" path="res://Assets/Banco/Banco.blend" id="8_qko4a"]
 [ext_resource type="PackedScene" uid="uid://cgjp6n6106qqk" path="res://Assets/Fogao/Fogao.blend" id="9_qko4a"]
 [ext_resource type="PackedScene" uid="uid://d3r8j60kg65dw" path="res://Assets/Sofa/Sofa1.blend" id="10_3gews"]
+[ext_resource type="PackedScene" uid="uid://c5g7lpxb5k88k" path="res://Assets/MicrondA/Microndas.blend" id="15_4tel5"]
+[ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -615,11 +617,11 @@ debug_color = Color(0.8448892, 0.0010269177, 0.9132927, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20813942, 2.1967206, 1.0159378)
 shape = SubResource("BoxShape3D_558uu")
 
-[node name="InteracaoTV" type="Area3D" parent="Sofa1" unique_id=311939856]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sofa1/InteracaoTV" unique_id=65628924]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sofa1/InteracaoSofa" unique_id=65628924]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0055332184, 2.6498466, -8.70731)
 shape = SubResource("BoxShape3D_383sq")
+
+[node name="InteracaoTV" type="Area3D" parent="Sofa1" unique_id=311939856]
 
 [node name="Banco" parent="." unique_id=690478026 instance=ExtResource("8_qko4a")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.4238937, -4.7683716e-07, 5.710644)
@@ -651,6 +653,12 @@ shape = SubResource("BoxShape3D_y7ql7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Armario de Roupa/InteracaoArmario" unique_id=2008146293]
 transform = Transform3D(10, 0, -8.526513e-14, 0, 10, 0, 8.526513e-14, 0, 10, -0.70233727, 4.519806, 0.9925785)
 shape = SubResource("BoxShape3D_hngxe")
+
+[node name="Microndas2" parent="." unique_id=1447750233 instance=ExtResource("15_4tel5")]
+transform = Transform3D(-3.059797e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.059797e-08, 4.80951, 4.7835693, 16.555056)
+
+[node name="Janela" parent="." unique_id=1141335337 instance=ExtResource("16_o85xk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.285017, 2.4030075, -13.647022)
 
 [connection signal="body_entered" from="P-S-W/CSGBox3D2/TriggerNarrador4" to="." method="_on_trigger_narrador_4_body_entered"]
 [connection signal="body_entered" from="BedroomCameraTrigger" to="." method="entered_bedroom"]
