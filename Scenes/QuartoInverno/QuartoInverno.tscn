@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
 [ext_resource type="PackedScene" uid="uid://d08esp0uw1wvh" path="res://Assets/Cadeira Gamer/Cadeira Gamer.blend" id="18_ssgdo"]
 [ext_resource type="PackedScene" uid="uid://dxnpawvw1citv" path="res://Assets/Estante/Estante.blend" id="19_r0iut"]
+[ext_resource type="AudioStream" uid="uid://bedv13ww30jvm" path="res://sons/Musicas/Inverno.mp3" id="19_tbxyw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -497,18 +498,24 @@ debug_color = Color(0.96168846, 1.540184e-06, 0.51167804, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.599873, 5.9811506, 12.0260105)
 size = Vector3(9.880615, 1, 12.653099)
 
+[node name="Cadeira Gamer colorido#StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Cadeira Gamer colorido_StaticBody3D#CollisionShape3D" type="CollisionShape3D" parent="."]
 [node name="Cadeira Gamer colorido#StaticBody3D" type="StaticBody3D" parent="." unique_id=1591777501]
 
 [node name="Cadeira Gamer colorido_StaticBody3D#CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1692205165]
 transform = Transform3D(1, 0, -1.9575452e-12, 0, 1, 0, 1.9575452e-12, 0, 1, -0.017150879, 10.221924, 0.17951965)
 shape = SubResource("BoxShape3D_xk6e0")
 
+[node name="Cadeira Gamer colorido_StaticBody3D#CollisionShape3D2" type="CollisionShape3D" parent="."]
 [node name="Cadeira Gamer colorido_StaticBody3D#CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=17445056]
 transform = Transform3D(1, 0, -1.7443824e-12, 0, 1, 0, 1.7443824e-12, 0, 1, -0.23745728, 12.833557, -16.38295)
 shape = SubResource("BoxShape3D_q14y7")
 
+[node name="Cadeira Gamer colorido#InteracaoMesa" type="Area3D" parent="."]
 [node name="Cadeira Gamer colorido#InteracaoMesa" type="Area3D" parent="." unique_id=1908508952]
 
+[node name="Cadeira Gamer colorido_InteracaoMesa#CollisionShape3D" type="CollisionShape3D" parent="."]
 [node name="Cadeira Gamer colorido_InteracaoMesa#CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1890241119]
 transform = Transform3D(1, 0, -1.897149e-12, 0, 1, 0, 1.897149e-12, 0, 1, 0.13294601, 19.17688, -7.4943237)
 shape = SubResource("BoxShape3D_y6655")
@@ -728,6 +735,10 @@ transform = Transform3D(-3.642613e-07, 0, 8.333334, 0, 8.333334, 0, -8.333334, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cadeira Gamer/InteracaoMesa" unique_id=89498760]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6204815, 1.9890876, 0.19210434)
 shape = SubResource("BoxShape3D_i23ay")
+
+[node name="MusicaInverno" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_tbxyw")
+autoplay = true
 
 [connection signal="body_entered" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_entered"]
 [connection signal="body_exited" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_exited"]

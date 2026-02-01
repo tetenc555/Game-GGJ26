@@ -1,4 +1,5 @@
 extends Node3D
+@onready var musica_verao = $musicaVerao
 
 var id: String = ""
 var interactionLocked: bool = false
@@ -62,99 +63,114 @@ func _on_interacao_mesa_body_entered(body):
 	trocaIDEntrada("mesaInverno",body);
 	
 
+	trocaIDEntrada("mesaInverno",body)
+	
 func _on_interacao_mesa_body_exited(body):
-	trocaIDSaida("mesaInverno",body);
+	trocaIDSaida("mesaInverno",body)
 
 func _on_interacao_banheiro_body_entered(body):
 	trocaIDEntrada("banheiroGeral",body);
 	
+	trocaIDEntrada("banheiroGeral",body)
 
 func _on_interacao_banheiro_body_exited(body):
-	trocaIDSaida("banheiroGeral",body);
+	trocaIDSaida("banheiroGeral",body)
 
 func _on_interacao_cama_body_entered(body):
 	trocaIDEntrada("camaInverno",body);
 	
+	trocaIDEntrada("camaInverno",body)
 
 func _on_interacao_cama_body_exited(body):
-	trocaIDSaida("camaInverno",body);
+	trocaIDSaida("camaInverno",body)
 
 func _on_interacao_cabeceira_body_entered(body):
 	trocaIDEntrada("cabeceiraInverno",body);
 	
+	trocaIDEntrada("cabeceiraInverno",body)
 
 func _on_interacao_cabeceira_body_exited(body):
-	trocaIDSaida("cabeceiraInverno",body);
+	trocaIDSaida("cabeceiraInverno",body)
 
 func _on_interacao_geladeira_body_entered(body):
 	trocaIDEntrada("geladeiraInverno",body);
 	
+	trocaIDEntrada("geladeiraInverno",body)
 
 func _on_interacao_geladeira_body_exited(body):
-	trocaIDSaida("geladeiraInverno",body);
+	trocaIDSaida("geladeiraInverno",body)
 
 func _on_interacao_pia_body_entered(body):
 	trocaIDEntrada("piaInverno",body);
 	
+	trocaIDEntrada("piaInverno",body)
 
 func _on_interacao_pia_body_exited(body):
-	trocaIDSaida("piaInverno",body);
+	trocaIDSaida("piaInverno",body)
 
 func _on_interacao_lava_roupa_body_entered(body):
 	trocaIDEntrada("lavaRoupaInverno",body);
 	
+	trocaIDEntrada("lavaRoupaInverno",body)
 
 func _on_interacao_lava_roupa_body_exited(body):
-	trocaIDSaida("lavaRoupaInverno",body);
+	trocaIDSaida("lavaRoupaInverno",body)
 
 func _on_interacao_sofa_body_entered(body):
 	trocaIDEntrada("sofaInverno",body);
 	
+	trocaIDEntrada("sofaInverno",body)
 
 func _on_interacao_sofa_body_exited(body):
-	trocaIDSaida("sofaInverno",body);
+	trocaIDSaida("sofaInverno",body)
 
 func _on_interacao_tv_body_entered(body):
 	trocaIDEntrada("TVInverno",body);
 	
+	trocaIDEntrada("TVInverno",body)
 
 func _on_interacao_tv_body_exited(body):
-	trocaIDSaida("TVInverno",body);
+	trocaIDSaida("TVInverno",body)
 
 func _on_interacao_fogao_body_entered(body):
 	trocaIDEntrada("fogaoInverno",body);
 	
+	trocaIDEntrada("fogaoInverno",body)
 
 func _on_interacao_fogao_body_exited(body):
-	trocaIDSaida("fogaoInverno",body);
+	trocaIDSaida("fogaoInverno",body)
 
 func _on_interacao_banco_body_entered(body):
 	trocaIDEntrada("bancoInverno",body);
 	
+	trocaIDEntrada("bancoInverno",body)
 
 func _on_interacao_banco_body_exited(body):
-	trocaIDSaida("bancoInverno",body);
+	trocaIDSaida("bancoInverno",body)
 
 func _on_interacao_armario_body_entered(body):
 	trocaIDEntrada("armarioInverno",body);
 	
+	trocaIDEntrada("armarioInverno",body)
 
 func _on_interacao_armario_body_exited(body):
-	trocaIDSaida("armarioInverno",body);
+	trocaIDSaida("armarioInverno",body)
 
 func _on_interacao_estante_body_entered(body):
 	trocaIDEntrada("estanteInverno",body);
 	
+	trocaIDEntrada("estanteInverno",body)
 
 func _on_interacao_estante_body_exited(body):
-	trocaIDSaida("estanteInverno",body);
+	trocaIDSaida("estanteInverno",body)
 
 func _on_interacao_janela_body_entered(body):
 	trocaIDEntrada("janelaInverno",body);
 	
+	trocaIDEntrada("janelaInverno",body)
 
 func _on_interacao_janela_body_exited(body):
-	trocaIDSaida("janelaInverno",body);
+	trocaIDSaida("janelaInverno",body)
 
 func fade_out(node: CSGBox3D):
 	var mat = node.material

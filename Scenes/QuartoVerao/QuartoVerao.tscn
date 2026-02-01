@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://dp6o15xpe0646"]
+[gd_scene load_steps=65 format=3 uid="uid://dp6o15xpe0646"]
 
 [ext_resource type="Script" uid="uid://0xfv4oqy028d" path="res://Scenes/QuartoVerao/QuartoVerao.gd" id="1_6d1t3"]
 [ext_resource type="PackedScene" uid="uid://db1dqsavnoda7" path="res://Scenes/Sophia/sophia.tscn" id="1_7q7q3"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://7ukblk0jeib" path="res://Assets/Janela Sala/Janela.blend" id="16_o85xk"]
 [ext_resource type="PackedScene" uid="uid://d08esp0uw1wvh" path="res://Assets/Cadeira Gamer/Cadeira Gamer.blend" id="19_hnn5l"]
 [ext_resource type="PackedScene" uid="uid://dxnpawvw1citv" path="res://Assets/Estante/Estante.blend" id="19_r0iut"]
+[ext_resource type="AudioStream" uid="uid://c145mvpmdjb7a" path="res://sons/Musicas/verao.mp3" id="20_hnn5l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33f23"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -717,6 +718,10 @@ shape = SubResource("BoxShape3D_43vj6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Estante/InteracaoEstante"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.342803, 0)
 shape = SubResource("BoxShape3D_e4h06")
+
+[node name="musicaVerao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_hnn5l")
+autoplay = true
 
 [connection signal="body_entered" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_entered"]
 [connection signal="body_exited" from="P-S-W/CSGBox3D/InteracaoBanheiro" to="." method="_on_interacao_banheiro_body_exited"]
